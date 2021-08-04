@@ -1,0 +1,60 @@
+.shopnow {
+    padding: 25px 75px;
+    display: flex;
+    z-index: 9;
+    align-items: center;
+    border: 1px solid rgb(22, 22, 25);
+    color:#fff;
+    background-color: rgb(22, 22, 25) ;
+    transition: .2s ease-in;
+    &:hover {
+        background-color: #ffffff;
+        color: rgb(22, 22, 25);
+    }
+    &:hover>span {
+        background-color: rgb(22, 22, 25);
+        transform: translateX(7px);
+    }
+    
+    p {
+        font-size: 14px;
+        margin-left: 3px;
+        letter-spacing: 1.5px;
+        font-family: Montserrat;
+    }
+    span {
+        position: relative;
+        transition: .2s ease-in;
+        margin-left: 10px;
+        width: 22px;
+        height: 1px;
+        background-color: #fff;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 7px;
+            background-color: currentColor;
+            -webkit-transform: rotate(-45deg) translate(10.5px,4px);
+            transform: rotate(-45deg);
+            right: 3px;
+            position: absolute;
+            top: -5px;
+        }
+        &::after {
+            content: "";
+            // display: block;
+            width: 1px;
+            height: 7px;
+            background-color: currentColor;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            right: 3px;
+            position: absolute;
+            top: -1px;
+        }
+}
+}
+
+

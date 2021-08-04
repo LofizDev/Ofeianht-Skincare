@@ -1,0 +1,200 @@
+.countdown {
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    margin-top: 200px;
+    margin-left: -20px;
+    .countdown-item {
+        margin-left: 20px;
+    }
+    .countdown__left {
+        overflow: hidden;
+        width: 50% ;
+        .countdown__left-image {
+            position: relative;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            .circle-animation {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .countdown__right {
+        overflow: hidden;
+        width: 50%;
+        .countdown__right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title-span {
+                font-family:Holimount, sans-serif;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 15px;
+            }
+            .title {
+                font-size: 48px;
+                line-height: 50px;
+                display: flex;
+                justify-content: center;
+                font-weight: 400;
+                font-family :"Cormorant Garamond";
+            }
+            p {
+                font-size: 14px;
+                margin-top: 20px;
+                justify-content: center;
+                display: flex;
+            }
+            .count-group {
+                display: flex;
+                justify-content: center;
+                margin: 30px 0px 60px 0px;
+                .count-circle {
+                    margin: 0 13px;
+                    width: 90px;
+                    height: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    border: 2px solid #EFDAE3;
+                    h6 {
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+                    .times {
+                        font-size: 14px;
+                        line-height: 24px;
+                    
+                    }
+                }
+            }
+            .count-price {
+                display: flex;
+                align-items: center;
+                
+                h5 {
+                    font-family :Montserrat;
+                    font-size: 48px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    margin-right: 40px;
+                    position: relative;
+                    &::before {
+                        content: '$';
+                        position: absolute;
+                        left: -13px;
+                        top: 8px;
+                        font-size: 22px;
+                    }
+                }
+                .shopnow {
+                    padding: 21px 68px;
+                    z-index: 0;
+                    span,p {
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+    // Responsive 
+    @media only screen and (max-width:965px) {
+       .countdown{
+          flex-direction: column;
+          .countdown-item {
+              width: 80%;
+          }
+          .countdown__right {
+              margin-top: 30px;
+          }
+       }
+    }
+
+    @media only screen and (max-width:600px) {
+        .countdown{
+           .countdown-item {
+               width: 90%;
+           }
+           .title {
+               font-size: 40px !important;
+               line-height: 42px !important;
+           }
+           .count-price {
+               h5 {
+                   font-size: 30px !important;
+                   line-height: 28px !important;
+                   &::before {
+                       font-size: 20px !important;
+                       top: 2px !important;
+                   }
+               }
+               .shopnow {
+                padding: 18px 30px !important;
+            }
+           }
+           .count-group {
+            margin: 30px 0px 30px 0px !important;
+            .count-circle {
+                margin: 0 9px !important;
+                width: 80px !important;
+                height: 80px !important;
+                h6 {
+                    font-size: 18px !important;
+                }
+                .times {
+                    font-size: 12px !important;
+                    line-height: 16px !important;
+                
+                }
+            }
+        }
+           
+        }
+     }
+     @media only screen and (max-width:420px) {
+        .countdown{
+           .title {
+               text-align: center;
+           }
+           .count-price {
+               .shopnow {
+                padding: 13px 20px !important;
+                margin-right: -20px;
+            }
+           }
+           .count-group {
+            margin: 30px 0px 25px 0px !important;
+            .count-circle {
+                margin: 0 5px !important;
+                width: 70px !important;
+                height: 70px !important;
+                h6 {
+                    font-size: 18px !important;
+                }
+                .times {
+                    font-size: 12px !important;
+                    line-height: 16px !important;
+                }
+            }
+        }   
+        }
+     }
+ 
+ 
+ 
+ 

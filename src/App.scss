@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face {
+  font-family: "holimount";
+  src: url(./assets/fonts/Holimount.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  font-size: 13px;
+  background-color: #fff;
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+$color2:#000;
+h4 {
+  line-height: 60px;
+  font-size: 60px;
+  font-family: holimount;
+  color:#161619;
+  font-weight: 500;
+  font-size: 200;
+}
+a {
+  text-decoration: none;
+  color: #212529;
+  cursor: pointer;
+}
+li {
+  cursor: pointer;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}

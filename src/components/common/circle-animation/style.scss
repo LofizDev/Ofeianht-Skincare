@@ -1,0 +1,195 @@
+.elementor-widget-container { 
+    -webkit-transition: background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+    transition: background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+    transition-property: background, border, border-radius, box-shadow, -webkit-border-radius, -webkit-box-shadow;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s;
+    transition-timing-function: ease, ease, ease, ease, ease, ease;
+    transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+    .center-text {
+    color: rgb(212, 164, 68);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    font-family :"Cormorant Garamond";
+    text-transform: uppercase;
+    line-height: 14px;
+}
+    .text-content {
+        width: 105px;
+        height: 105px;
+        position: relative;
+        font-weight: 400;
+    .circle-text {
+        width: 105px;
+        height: 105px;
+        font-size: 12px;
+        border-radius: 50%;
+        animation: jws-rotate 20s linear infinite ;
+        animation-duration: 20s ;
+        animation-timing-function: linear ;
+        animation-delay: 0s ;
+        animation-iteration-count: infinite ;
+        animation-direction: normal ;
+        animation-fill-mode: none ;
+        animation-play-state: running ;
+        text-align: center ;
+    .letter {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 6.5px;
+        transition: all 0.5s cubic-bezier(0,0,0,1);
+        color: #C93;
+    }
+    .letter:nth-child(1) {
+        transform: rotateZ(0deg);
+    }
+    .letter:nth-child(2) {
+        transform: rotateZ(
+    13.8462deg
+    );
+    }
+    .letter:nth-child(3) {
+        transform: rotateZ(
+            27.6923deg
+            );
+    }
+    .letter:nth-child(4) {
+        transform: rotateZ(
+            41.5385deg
+            );
+    }
+    .letter:nth-child(5) {
+        transform: rotateZ(
+            55.3846deg
+            );
+    }
+    .letter:nth-child(6) {
+        transform: rotateZ(
+    69.2308deg
+    );
+    }
+    .letter:nth-child(7) {
+        transform: rotateZ(
+            83.0769deg
+            );
+    }
+    .letter:nth-child(8) {
+        transform: rotateZ(
+            96.9231deg
+            );
+    }
+    .letter:nth-child(9) {
+        transform: rotateZ(
+    110.769deg
+    );
+    }
+    .letter:nth-child(10) {
+        transform: rotateZ(
+    124.615deg
+    );
+    }
+    .letter:nth-child(11) {
+        transform: rotateZ(
+            138.462deg
+            );
+    }
+    .letter:nth-child(12) {
+        transform: rotateZ(
+            152.308deg
+            );
+    }
+    .letter:nth-child(13) {
+        transform: rotateZ(
+    166.154deg
+    );
+    }
+    .letter:nth-child(14) {
+        transform: rotateZ(
+    180deg
+    );
+    }
+    .letter:nth-child(15) {
+        transform: rotateZ(
+            193.846deg
+            );
+    }
+    .letter:nth-child(16) {
+        transform: rotateZ(
+            207.692deg
+            );
+    }
+    .letter:nth-child(17) {
+        transform: rotateZ(
+    221.538deg
+    );
+    }
+    .letter:nth-child(18) {
+        transform: rotateZ(
+    235.385deg
+    );
+    }
+    .letter:nth-child(19) {
+        transform: rotateZ(
+            249.231deg
+            );
+            
+    }
+    .letter:nth-child(20) {
+        transform: rotateZ(
+            263.077deg
+            );
+    
+    }
+    .letter:nth-child(21) {
+        transform: rotateZ(
+    276.923deg
+    );
+    }
+    .letter:nth-child(22) {
+        transform: rotateZ(
+            290.769deg
+            );
+    }
+    .letter:nth-child(23) {
+        transform: rotateZ(
+            304.615deg
+            );
+    }
+    .letter:nth-child(24) {
+        transform: rotateZ(
+            318.462deg
+            );
+    }
+    .letter:nth-child(25) {
+        transform: rotateZ(
+    332.308deg
+    );
+    }
+    .letter:nth-child(26) {
+        
+        transform: rotateZ(
+    346.154deg
+    );
+    }
+}
+    }
+
+}
+
+@keyframes jws-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+    
+}

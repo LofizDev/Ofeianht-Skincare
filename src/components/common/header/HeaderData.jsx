@@ -1,0 +1,22 @@
+export const HeaderData = [
+    {
+        title:"HOME",
+        path:'/'
+    },
+    {
+        title:"SHOP",
+        path:'/SHOP'
+    },
+    {
+        title:"PAGE",
+        path:'/PAGE'
+    },
+    {
+        title:"BLOG",
+        path:'/BLOG'
+    },
+    {
+        title:"PORTFOLIO",
+        path:'/PORTFOLIO'
+    }
+]

@@ -1,0 +1,230 @@
+.blog {
+    margin-top: 100px;
+    .blog__wrapper {
+        padding:  0 20px;
+        .blog__wrapper-header {
+            .viewall {
+                position: absolute;
+                right: 0px;
+                display: inline-block;
+                top: 22px;
+                font-size: 14px;
+                padding-left: 20px;
+                line-height: 28px;
+                letter-spacing: 2.5px;
+                font-weight: 400;
+                background-color: white;
+                &:hover {
+                    cursor: pointer;
+                    color:rgb(243, 88, 74);
+                }
+            }
+        }
+        .blog__wrapper-post {
+            display: flex;
+            max-width: 1300px;
+            margin: 100px auto;
+            padding-left: -55px;
+            .post {
+                width: 33.333%;
+                margin: 0 35px;
+                cursor: pointer;
+                .post-image {
+                     height: 420px;
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .post-content {
+                    margin-top: 26px;
+                    display: flex;
+                    .post-date {
+                        width: 100px;
+                        position: relative;
+                        float: left;
+                        text-align: center;
+                        .day {
+                            font-size: 72px;
+                            font-family :Montserrat;
+                            opacity: .2;
+                            font-weight: 400;
+                            line-height: 64px;
+                        }
+                        .month {
+                            font-family :Holimount, sans-serif;
+                            font-size: 36px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                    .post-title {
+                        margin-left: 25px;
+                        h6 {
+                            font-size: 11px;
+                            color:rgb(243, 88, 74);
+                            line-height: 25px;
+                            font-weight: normal;
+                            letter-spacing: 2.6px;
+                            &:hover {
+                                color: black;
+                                cursor: pointer;
+                            }
+                        }
+                        h4 {
+                            font-family :"Cormorant Garamond" ;
+                            line-height: 24px;
+                            margin-top: 0px;
+                            font-size: 22px;
+                            font-weight: normal;
+                        }
+                    }
+                 }
+            }
+        }
+        #showbox {
+            // position: absolute;
+            // width: 100%;
+            // height: 100%;
+            // background-color: red;
+        }
+    }
+}
+.postactive {
+    position: relative;
+}
+.showbox {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 22, 25);
+    .showbox__wrapper {
+        display: flex;
+        flex-direction: column;
+        .show__wrapper-bottom {
+            input {
+                border: 0;
+                border-bottom: 2px solid #ddd;
+                background-color: transparent;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 40px;
+                width: 70%;
+                text-align: center;
+                padding: 20px 0;
+                color: #ddd;
+                outline: none;
+                font-size: 14px;
+                letter-spacing: 2.8px;
+                font-weight: 400;
+                &::placeholder {
+                    color: #ddd;
+                } 
+            }
+            
+        }
+    }
+    .showbox__wrapper-header {
+        h4{
+            color: #FFFFFF;
+            font-family:"Cormorant Garamond";
+            font-size: 18px;
+            line-height: 40px;
+            letter-spacing: 6px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 35px;
+        }
+        span {
+            width: 1.05px;
+            margin: 17px 0;
+            height: 65px;
+            background: #FFFFFF;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .slogan {
+            font-family:"Cormorant Garamond";
+            line-height: 34px;
+            font-size: 23px;
+            letter-spacing: .3px;
+            font-style: italic;
+            font-weight: 500;
+            color: #FFFFFF;
+            font-family:"Cormorant Garamond";
+            text-align: center;
+            padding: 0px 30px;
+        }
+        .slogan1 {
+            margin-top: 105px;
+        }
+    }
+    .close-icon {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 80px;
+        right: 0;
+    }
+}
+.closebox {
+    display: none;
+}
+// Resposive 
+@media  screen and(max-width: 1024px) {
+    .post-image {
+        height: 380px !important;
+    }
+    .blog__wrapper {
+        margin-right: -20px !important;
+    }
+    .post {
+        margin-left: 20px !important;
+    }
+    .close-icon {
+        transform: translateX(60px) !important;
+    }
+}
+@media  screen and(max-width: 768px) {
+  .blog__wrapper-post {
+      flex-wrap: wrap;
+  }
+  .post {
+      width: calc(50% - 60px) !important;
+  }
+  .post:nth-child(3) {
+      margin-top: 50px !important;
+  }
+  .blog__wrapper-header {
+       span {
+           font-size:30px !important;
+       }
+       .title h2 {
+           font-size: 40px !important;
+       }
+       .viewall {
+           font-size: 13px !important;
+       }
+  }
+}
+@media  screen and(max-width: 620px) {
+    .blog__wrapper-post {
+        flex-wrap: wrap;
+    }
+    .post {
+        width: calc(90% - 0px) !important;
+    }
+    .post:nth-child(3),.post:nth-child(2) {
+        margin-top: 50px !important;
+    }
+    .close-icon {
+        transform: translateX(40px) !important;
+    }
+    
+  }

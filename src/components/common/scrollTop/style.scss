@@ -1,0 +1,63 @@
+.show-scroll {
+    position: fixed;
+    right: 23px;
+    width: 52px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    bottom: 50px;
+    align-items: center;
+    height: 50px;
+    justify-content: center;
+    transform: translateY(0%);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50%;
+    transition: 0.45s;
+    opacity: 1;
+    &:hover span {
+        height: 15px;
+    }
+    span {
+        width: .7px;
+        height: 0px;
+        position: relative;
+        margin: 0;
+        background-color: black;
+        transition: all 0.2s linear;
+        &::before {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 7px;
+            background-color: currentColor;
+            transform: rotate(135deg);
+            left: 2px;
+            position: absolute;
+            top: -1px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 7px;
+            background-color: currentColor;
+            transform: rotate(-135deg);
+            right: 2px;
+            position: absolute;
+            top: -1px;
+        }
+    }
+
+}
+
+.hide-scroll {
+    opacity: 0;
+    border-radius: 50%;
+    transition: 0.45s;
+    transition-property: all;
+    transition-duration: 0.45s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transform: translateY(100%);
+}
