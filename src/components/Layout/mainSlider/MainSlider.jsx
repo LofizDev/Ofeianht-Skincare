@@ -6,8 +6,6 @@ import { gel1,gel2,treeslider,treeslider3,persionslider2,logoslider1,modalslider
 import {ShowNow} from '../../common/button/Button'
 
 
-
-
 function MainSlider() {
 
     const settings = {
@@ -16,7 +14,6 @@ function MainSlider() {
         infinite: true,
         speed: 500,
         lazyLoad: true,
-  
       };
     return (
         <div className='hero__slider'>

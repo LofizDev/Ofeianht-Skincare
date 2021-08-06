@@ -5,6 +5,7 @@ import Parallax from '../common/parallax/Parallax'
 import MainSlider from '../Layout/mainSlider/MainSlider'
 import Banner from './banner/Banner'
 import Blog from './blog/Blog'
+import BrandSlider from './brandSlider/BrandSlider'
 import CountDown from './countDown/CountDown'
 import ItemSlider from './itemSlider/ItemSlider'
 function index() {
@@ -13,7 +14,8 @@ function index() {
             <Header/>
             <MainSlider/>
             <Banner/>
-            <ItemSlider />
+            {/* <ItemSlider /> */}
+            <BrandSlider/>
             <CountDown/>
             <Blog/>
             <Parallax/>

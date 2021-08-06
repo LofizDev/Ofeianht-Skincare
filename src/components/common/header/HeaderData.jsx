@@ -1,22 +1,23 @@
+import {UrlNames} from '../../Layout/UrlNames'
 export const HeaderData = [
     {
         title:"HOME",
-        path:'/'
+        path:UrlNames.HOME
     },
     {
         title:"SHOP",
-        path:'/SHOP'
+        path:UrlNames.SHOP
     },
     {
-        title:"PAGE",
-        path:'/PAGE'
+        title:"ABOUT",
+        path:UrlNames.ABOUT
+    },
+    {
+        title:"CONTACT",
+        path:UrlNames.CONTACT
     },
     {
         title:"BLOG",
-        path:'/BLOG'
-    },
-    {
-        title:"PORTFOLIO",
-        path:'/PORTFOLIO'
+        path:UrlNames.BLOG
     }
 ]

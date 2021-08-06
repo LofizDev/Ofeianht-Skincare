@@ -23,15 +23,14 @@ function Footer() {
                             </div>
                         </div>
 
-
                     </div>
                     <div className="content-right">
                         <div className="address">
                             <h6 >OUR STORE</h6>
                             <ul>
-                                <li><img width='15px' src={pin} />Address: 500 Terry Francois Street <br /> San Francisco, CA 94158</li>
-                                <li><img width='15px' src={call} />Phone: 123-456-7890</li>
-                                <li><img width='15px' src={mail} /> info@my-domain.com</li>
+                                <li><img width='15px' alt='icon' src={pin} />Address: 500 Terry Francois Street <br /> San Francisco, CA 94158</li>
+                                <li><img width='15px' alt='icon'src={call} />Phone: 123-456-7890</li>
+                                <li><img width='15px' alt='icon' src={mail} /> info@my-domain.com</li>
                             </ul>
                         </div>
                         <div className='about'>
