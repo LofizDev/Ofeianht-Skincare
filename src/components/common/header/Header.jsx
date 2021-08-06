@@ -42,7 +42,7 @@ function Header() {
 
     useEffect(() => {
         setShow(currentPos > previousPos ? true : false)
-    }, [currentPos,previousPos])
+    }, [currentPos])
 
 
     return (
