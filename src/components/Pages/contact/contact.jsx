@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../../common/footer/Footer'
 import Parallax from '../../common/parallax/Parallax'
 import { contact2, contact3, contact4, contact5 } from '../../common/icon/index'
 import Header from '../../common/header/Header'
 import './style.scss'
 
-function contact() {
+function Contact() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
+
     return (
         <div className='page__contact'>
             <div className="page__contact-wrapper">
@@ -111,4 +115,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact

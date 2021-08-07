@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../common/footer/Footer'
 import Header from '../common/header/Header'
 import Parallax from '../common/parallax/Parallax'
@@ -8,7 +8,11 @@ import Blog from './blog/Blog'
 import BrandSlider from './brandSlider/BrandSlider'
 import CountDown from './countDown/CountDown'
 import ItemSlider from './itemSlider/ItemSlider'
-function index() {
+function Index() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
+
     return (
         <div>
             <Header/>
@@ -24,4 +28,4 @@ function index() {
     )
 }
 
-export default index
+export default Index

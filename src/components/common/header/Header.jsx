@@ -7,8 +7,6 @@ import Close from '../closeIcon/Close'
 import HeaderMobi from '../header/headerMobile/HeaderMobile'
 
 function Header() {
-
-
     // Toggle show searchBox,sideBar
     const [searchBox, setSearchBox] = useState(false)
     const [sideBarToggle, setSideBarToggle] = useState(false)
@@ -41,6 +39,9 @@ function Header() {
     }
 
     useEffect(() => {
+        console.log(previousPos)
+        console.log(currentPos)
+        console.log(currentPos > previousPos ? true : false)
         setShow(currentPos > previousPos ? true : false)
     }, [currentPos])
 

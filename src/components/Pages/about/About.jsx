@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './style.scss'
 import Header from '../../common/header/Header'
 import Footer from '../../common/footer/Footer'
 import Parallax from '../../common/parallax/Parallax'
 function About() {
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
+     
     return (
         <div className='page__about'>
             <Header />
@@ -12,7 +16,6 @@ function About() {
                     <h2>ABOUT US</h2>
                     <p>If you need to message us, please fill out the form bellow</p>
             </div>
-
             </div>
             <Parallax/>
             <Footer/>
