@@ -9,6 +9,7 @@ import BrandSlider from './brandSlider/BrandSlider'
 import CountDown from './countDown/CountDown'
 import ItemSlider from './itemSlider/ItemSlider'
 function Index() {
+    
     useEffect(() => {
         window.scrollTo(0,0)
     }, []);

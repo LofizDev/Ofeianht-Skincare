@@ -39,9 +39,6 @@ function Header() {
     }
 
     useEffect(() => {
-        console.log(previousPos)
-        console.log(currentPos)
-        console.log(currentPos > previousPos ? true : false)
         setShow(currentPos > previousPos ? true : false)
     }, [currentPos])
 

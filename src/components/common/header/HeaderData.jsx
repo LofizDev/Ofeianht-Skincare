@@ -13,7 +13,7 @@ export const HeaderData = [
         path:UrlNames.ABOUT
     },
     {
-        title:"CONTACT",
+        title:"CONTACTT",
         path:UrlNames.CONTACT
     },
     {
