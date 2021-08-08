@@ -20,7 +20,7 @@ function App() {
           <Route path={`${UrlNames.ABOUT}`} exact component={About}></Route>
         </Switch>
       </Router>
-      <ScrollTopRouter />
+      {/* <ScrollTopRouter /> */}
       <ScrollTop/>
 
 

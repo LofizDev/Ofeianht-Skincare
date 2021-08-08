@@ -1,8 +1,177 @@
 .page__about {
     &-wrapper {
-        .contact-banner {
-            background-image: url(http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/05/banner-1.jpg);
-    
+        .about-banner {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px 0;
+            h2 {
+                font-family:Montserrat, sans-serif;
+                font-size: 34px;
+                line-height: 68px;
+                font-weight: 400;
+            }
+            p {
+                font-size: 14px;
+                line-height: 28px;
+            }
+        }  
+        .about-stories {
+            background-color: rgb(255, 246, 243);
+            .stories__wrapper {
+                display: flex;
+                max-width: 1200px;
+                margin-top: 70px !important;
+                margin: 0px auto;
+                padding: 0 15px 0;
+                padding-bottom: 30px;
+                &-left {
+                    margin-top: 90px;
+                    width: 50%;
+                    padding-right: 80px;
+                    .stories-title {
+                        font-family :"Cormorant Garamond";
+                        font-size: 48px;
+                        line-height: 50px;
+                        font-weight: 400;
+                        margin-bottom: 25px;
+                    }
+                    .stories-text {
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-weight: 400;
+                    }
+                    .text-active {
+                        margin-top: 10px ;
+                    }
+                }
+                &-right {
+                    width: 50%;
+                    position: relative;
+                    top: -80px;
+                    right: 0;
+                    img {
+                        width: 585px;
+                    }
+                    #circle {
+                        position: absolute;
+                        right: -40px !important;
+                        top: -27px;
+                        .center-text ,span{
+                            color:#161619;
+                            font-weight: 400;
+                        }
+                    }
+                    .let-intouch {
+                        position: absolute;
+                        right: 0;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        margin-top: 40px ;
+                    }
+                }
+            }
+        } 
+        .about-products {
+            &-wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                padding: 0px 15px;
+                flex-direction: column;
+                .title-span-pro {
+                    font-family:Holimount, sans-serif;
+                    line-height: 24px;
+                    font-size: 40px;    
+                }
+                .title-pro {
+                    font-size: 48px;
+                    margin-top: 17px;
+                    font-weight: 400;
+                    line-height: 50px;
+                    font-family :"Cormorant Garamond";
+                }
+                .text-pro {
+                    margin: 35px 0px 40px;
+                    font-size: 14px;
+                    max-width: 400px;
+                    line-height: 28px;
+                }
+                #btn-about {
+                    background-color: transparent;
+                    color: #161619;
+                    span {
+                        background-color: #161619;
+                    }
+                    &:hover {
+                        color: #fafafa;
+                        background-color:rgb(23, 23, 26);
+                    }
+                    &:hover span {
+                        background-color: #fafafa;
+                    } 
+                }
+                .product-top {
+                    display: flex;
+                    margin-left: 45px;
+                    margin-top: 100px;
+                    align-items: center;
+                    &-left {
+                        width: 55%;
+                    }
+                    &-right {
+                        width: 45%;
+                    }
+                }
+                .product-bottom {
+                    display: flex;
+                    margin-top: 40px;
+                    align-items: center;
+                    &-left {
+                        width: 50%;
+                    }
+                    &-right {
+                        width: 50%;
+                    }
+             
+                }
+            }
+
+        }     
+        .about-persons {
+            margin: 80px 0;
+            &-wrapper {
+                display: flex;
+                max-width: 1200px;
+                margin: 0 auto;
+                .about-person {
+                    margin-left: 50px;
+                    .person-avatar {
+                        width: 333px;
+                        height: 444px;
+                        object-fit: cover;
+                    }
+                    .person-info {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        span {
+                            font-size: 12px;
+                            color: rgb(158, 154, 148);
+                            line-height: 14px;
+                            margin: 20px 0 9px;
+                        }
+                        p {
+                            line-height: 36px;
+                            font-size: 30px;
+                            font-style: italic;
+                            font-weight: 500;
+                            font-family :"Cormorant Garamond";
+                        }
+                    }
+                }
+            }
         }
     }
 }

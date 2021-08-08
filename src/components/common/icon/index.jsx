@@ -51,3 +51,8 @@ export {default as contact2} from '../../../assets/images/contact2.png'
 export {default as contact3} from '../../../assets/images/contact3.png'
 export {default as contact4} from '../../../assets/images/contact4.png'
 export {default as contact5} from '../../../assets/images/contact5.png'
+
+// img about 
+export {default as about1} from '../../../assets/images/about-img1.png'
+export {default as about2} from '../../../assets/images/about-img2.jpg'
+export {default as about3} from '../../../assets/images/about-img3.jpg'

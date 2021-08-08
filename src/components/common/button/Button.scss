@@ -15,7 +15,7 @@
         background-color: rgb(22, 22, 25);
         transform: translateX(7px);
     }
-    
+
     p {
         font-size: 14px;
         margin-left: 3px;
@@ -24,10 +24,10 @@
     }
     span {
         position: relative;
-        transition: .2s ease-in;
+        transition: .15s ease-in;
         margin-left: 10px;
         width: 22px;
-        height: 1px;
+        height: .9px;
         background-color: #fff;
 
         &::before {
@@ -44,7 +44,6 @@
         }
         &::after {
             content: "";
-            // display: block;
             width: 1px;
             height: 7px;
             background-color: currentColor;
