@@ -7,6 +7,8 @@ import {UrlNames} from './components/Layout/UrlNames'
 import contact from './components/Pages/contact/contact'
 import ScrollTopRouter from './components/common/scrollTopRouter/ScrollTopRouter'
 import About from './components/Pages/about/About'
+import Blog from './components/Pages/blog/Blog'
+
 function App() {
   useEffect(() => {
     window.scrollTo(0,0)
@@ -18,6 +20,7 @@ function App() {
           <Route path={`${UrlNames.HOME}`} exact component={index}></Route>
           <Route path={`${UrlNames.CONTACT}`} exact component={contact}></Route>
           <Route path={`${UrlNames.ABOUT}`} exact component={About}></Route>
+          <Route path={`${UrlNames.BLOG}`} exact component={Blog}></Route>
         </Switch>
       </Router>
       {/* <ScrollTopRouter /> */}
