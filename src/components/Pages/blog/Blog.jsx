@@ -11,6 +11,7 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import { blog1, blog2, blog3 } from '../../common/icon/index'
 
 function Blog() {
+    
     return (
         <div className='blog__page'>
             <Header />
