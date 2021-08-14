@@ -6,7 +6,8 @@ import Parallax from '../../common/parallax/Parallax'
 import Circle from '../../common/circle-animation/Circle'
 import { about1, about2, about3 } from '../../common/icon/index'
 function About() {
-    
+ 
+   
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);

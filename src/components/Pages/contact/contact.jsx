@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import Footer from '../../common/footer/Footer'
 import Parallax from '../../common/parallax/Parallax'
 import { contact2, contact3, contact4, contact5 } from '../../common/icon/index'
@@ -6,6 +6,14 @@ import Header from '../../common/header/Header'
 import './style.scss'
 
 function Contact() {
+    const [offsetY,setOffsetY] = useState(0)
+    const handleScroll = () => setOffsetY(window.pageYOffset)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll',handleScroll)
+    },[])
+
     useEffect(() => {
         window.scrollTo(0,0)
     }, []);
@@ -34,7 +42,7 @@ function Contact() {
                     </div>
                 </div>
                 <div className="contact-address">
-                    <img className='contact4' src={contact4} alt="contact4" className="contact4" />
+                    <img style={{right: `${offsetY *0.1}px`}} className='contact4' src={contact4} alt="contact4" className="contact4" />
                     <div className="address-wrapper">
                         <div className="address-detail">
                             <div className="title">

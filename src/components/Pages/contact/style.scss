@@ -59,7 +59,7 @@
             overflow: hidden;
             position: relative;
             .contact4 {
-                right: -15px;
+                transform: translateX(90px);
                 position: absolute;
                 z-index: -1;
             }
@@ -218,6 +218,9 @@
             width: 100% !important;
             margin-top: 20px;
         }
+    }
+    .contact4 {
+        transform: translateX(190px) !important;
     }
     .top-gr {
         flex-direction: column !important;

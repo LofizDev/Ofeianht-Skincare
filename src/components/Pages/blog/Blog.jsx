@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Header from '../../common/header/Header'
 import Footer from '../../common/footer/Footer'
 import './style.scss'
@@ -11,7 +11,10 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import { blog1, blog2, blog3 } from '../../common/icon/index'
 
 function Blog() {
-    
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
+
     return (
         <div className='blog__page'>
             <Header />
