@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/Ofeianht-Skincare/static/css/main.2a3cb6aa.chunk.css",
-    "main.js": "/Ofeianht-Skincare/static/js/main.9bb0bd98.chunk.js",
-    "main.js.map": "/Ofeianht-Skincare/static/js/main.9bb0bd98.chunk.js.map",
+    "main.css": "/Ofeianht-Skincare/static/css/main.623bf94d.chunk.css",
+    "main.js": "/Ofeianht-Skincare/static/js/main.bb27715d.chunk.js",
+    "main.js.map": "/Ofeianht-Skincare/static/js/main.bb27715d.chunk.js.map",
     "runtime-main.js": "/Ofeianht-Skincare/static/js/runtime-main.be4076a7.js",
     "runtime-main.js.map": "/Ofeianht-Skincare/static/js/runtime-main.be4076a7.js.map",
     "static/css/2.a2caab99.chunk.css": "/Ofeianht-Skincare/static/css/2.a2caab99.chunk.css",
-    "static/js/2.c1180e9a.chunk.js": "/Ofeianht-Skincare/static/js/2.c1180e9a.chunk.js",
-    "static/js/2.c1180e9a.chunk.js.map": "/Ofeianht-Skincare/static/js/2.c1180e9a.chunk.js.map",
+    "static/js/2.b5e5b1a8.chunk.js": "/Ofeianht-Skincare/static/js/2.b5e5b1a8.chunk.js",
+    "static/js/2.b5e5b1a8.chunk.js.map": "/Ofeianht-Skincare/static/js/2.b5e5b1a8.chunk.js.map",
     "index.html": "/Ofeianht-Skincare/index.html",
     "static/css/2.a2caab99.chunk.css.map": "/Ofeianht-Skincare/static/css/2.a2caab99.chunk.css.map",
-    "static/css/main.2a3cb6aa.chunk.css.map": "/Ofeianht-Skincare/static/css/main.2a3cb6aa.chunk.css.map",
-    "static/js/2.c1180e9a.chunk.js.LICENSE.txt": "/Ofeianht-Skincare/static/js/2.c1180e9a.chunk.js.LICENSE.txt",
+    "static/css/main.623bf94d.chunk.css.map": "/Ofeianht-Skincare/static/css/main.623bf94d.chunk.css.map",
+    "static/js/2.b5e5b1a8.chunk.js.LICENSE.txt": "/Ofeianht-Skincare/static/js/2.b5e5b1a8.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/Ofeianht-Skincare/static/media/parallax.025f5f63.jpg",
     "static/media/close.scss": "/Ofeianht-Skincare/static/media/Holimount.f1bbcfa8.otf",
     "static/media/about-img1.330219d3.png": "/Ofeianht-Skincare/static/media/about-img1.330219d3.png",
     "static/media/about-img2.33cd42b4.jpg": "/Ofeianht-Skincare/static/media/about-img2.33cd42b4.jpg",
     "static/media/about-img3.05032bdb.jpg": "/Ofeianht-Skincare/static/media/about-img3.05032bdb.jpg",
+    "static/media/ball1.1a34f94e.png": "/Ofeianht-Skincare/static/media/ball1.1a34f94e.png",
+    "static/media/ball2.982c7247.png": "/Ofeianht-Skincare/static/media/ball2.982c7247.png",
     "static/media/banner01.e90b8bf2.jpg": "/Ofeianht-Skincare/static/media/banner01.e90b8bf2.jpg",
     "static/media/banner03.8667987d.jpg": "/Ofeianht-Skincare/static/media/banner03.8667987d.jpg",
     "static/media/banner04.26a24a0e.jpg": "/Ofeianht-Skincare/static/media/banner04.26a24a0e.jpg",
@@ -43,6 +45,7 @@
     "static/media/flase-sale.8d1060a0.jpg": "/Ofeianht-Skincare/static/media/flase-sale.8d1060a0.jpg",
     "static/media/gelslider1.bcc35deb.png": "/Ofeianht-Skincare/static/media/gelslider1.bcc35deb.png",
     "static/media/gelslider2.45b7a548.png": "/Ofeianht-Skincare/static/media/gelslider2.45b7a548.png",
+    "static/media/introduce.c1b2193a.jpg": "/Ofeianht-Skincare/static/media/introduce.c1b2193a.jpg",
     "static/media/logo.d0321a9b.svg": "/Ofeianht-Skincare/static/media/logo.d0321a9b.svg",
     "static/media/loveyourskintext.9b727e1f.png": "/Ofeianht-Skincare/static/media/loveyourskintext.9b727e1f.png",
     "static/media/modalslider1.7c862436.png": "/Ofeianht-Skincare/static/media/modalslider1.7c862436.png",
@@ -58,8 +61,8 @@
   "entrypoints": [
     "static/js/runtime-main.be4076a7.js",
     "static/css/2.a2caab99.chunk.css",
-    "static/js/2.c1180e9a.chunk.js",
-    "static/css/main.2a3cb6aa.chunk.css",
-    "static/js/main.9bb0bd98.chunk.js"
+    "static/js/2.b5e5b1a8.chunk.js",
+    "static/css/main.623bf94d.chunk.css",
+    "static/js/main.bb27715d.chunk.js"
   ]
 }
