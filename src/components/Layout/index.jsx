@@ -7,7 +7,9 @@ import Banner from './banner/Banner'
 import Blog from './blog/Blog'
 import BrandSlider from './brandSlider/BrandSlider'
 import CountDown from './countDown/CountDown'
+import Introduce from './introduce/Introduce'
 import ItemSlider from './itemSlider/ItemSlider'
+import ParallaxHome from './parallaxHome/ParallaxHome'
 function Index() {
     
     useEffect(() => {
@@ -20,6 +22,8 @@ function Index() {
             <MainSlider/>
             <Banner/>
             {/* <ItemSlider /> */}
+            <Introduce/>
+            <ParallaxHome/>
             <BrandSlider/>
             <CountDown/>
             <Blog/>

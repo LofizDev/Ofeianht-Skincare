@@ -1,0 +1,73 @@
+#parallax-home {
+    background-image:url('../../../assets//images/parallax-home.jpeg') ;
+    background-repeat: repeat-y;
+    height: 465px ;
+    margin: 110px 0;
+    .parallax__wrapper {
+        .pa-ti-ho {
+            text-align: center;
+            font-family :Holimount, sans-serif;
+            font-size: 40px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+        .text-ti-ho {
+            text-align: center;
+            max-width:500px !important ;
+            font-family :"Cormorant Garamond";
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 400;
+        }
+        #btn-prl {
+            margin: 0 auto;
+            margin-top: 50px;
+            padding: 20px 58px;
+        }
+    }
+}
+
+// Responsive 
+@media screen and(max-width:1024px) {
+    #parallax-home {
+        height: 420px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and(max-width:768px) {
+    #parallax-home {
+        height: 300px;
+        width: 100%;
+        background-attachment:local;
+        .text-ti-ho {
+            padding: 0 70px;
+            font-size: 40px !important;
+            line-height: 42px !important;
+        }
+        #btn-prl {
+            margin-top: 30px !important;
+            padding: 17px 23px !important;
+        }
+
+    }
+}
+@media screen and(max-width:450px) {
+    #parallax-home {
+        height: 270px;
+        width: 100%;
+        background-attachment:local;
+        .text-ti-ho {
+            padding: 0 0px;
+            font-size: 30px !important;
+            line-height: 32px !important;
+        }
+        #btn-prl {
+            margin-top: 15px !important;
+            padding: 14px 16px !important;
+        }
+
+    }
+}
+

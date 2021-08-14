@@ -1,7 +1,7 @@
 .blog {
     margin-top: 100px;
     .blog__wrapper {
-        padding:  0 20px;
+        padding: 0 20px;
         .blog__wrapper-header {
             .viewall {
                 position: absolute;
@@ -16,7 +16,7 @@
                 background-color: white;
                 &:hover {
                     cursor: pointer;
-                    color:rgb(243, 88, 74);
+                    color: rgb(243, 88, 74);
                 }
             }
         }
@@ -29,12 +29,18 @@
                 width: 33.333%;
                 margin: 0 35px;
                 cursor: pointer;
+                &:hover img {
+                    transform: scale(1.1) !important;
+                }
                 .post-image {
-                     height: 420px;
+                    overflow: hidden;
+                    height: 420px;
                     img {
                         object-fit: cover;
                         height: 100%;
                         width: 100%;
+                        transition-duration: 0.4s;
+                        transition-timing-function: ease;
                     }
                 }
                 .post-content {
@@ -47,25 +53,25 @@
                         text-align: center;
                         .day {
                             font-size: 72px;
-                            font-family :Montserrat;
-                            opacity: .2;
+                            font-family: Montserrat;
+                            opacity: 0.2;
                             font-weight: 400;
                             line-height: 64px;
                         }
                         .month {
-                            font-family :Holimount, sans-serif;
+                            font-family: Holimount, sans-serif;
                             font-size: 36px;
                             position: absolute;
                             top: 50%;
                             left: 50%;
-                            transform: translate(-50%,-50%);
+                            transform: translate(-50%, -50%);
                         }
                     }
                     .post-title {
                         margin-left: 25px;
                         h6 {
                             font-size: 11px;
-                            color:rgb(243, 88, 74);
+                            color: rgb(243, 88, 74);
                             line-height: 25px;
                             font-weight: normal;
                             letter-spacing: 2.6px;
@@ -75,22 +81,17 @@
                             }
                         }
                         h4 {
-                            font-family :"Cormorant Garamond" ;
+                            font-family: "Cormorant Garamond";
                             line-height: 24px;
                             margin-top: 0px;
                             font-size: 22px;
                             font-weight: normal;
                         }
                     }
-                 }
+                }
             }
         }
-        #showbox {
-            // position: absolute;
-            // width: 100%;
-            // height: 100%;
-            // background-color: red;
-        }
+
     }
 }
 .postactive {
@@ -125,15 +126,14 @@
                 font-weight: 400;
                 &::placeholder {
                     color: #ddd;
-                } 
+                }
             }
-            
         }
     }
     .showbox__wrapper-header {
-        h4{
-            color: #FFFFFF;
-            font-family:"Cormorant Garamond";
+        h4 {
+            color: #ffffff;
+            font-family: "Cormorant Garamond";
             font-size: 18px;
             line-height: 40px;
             letter-spacing: 6px;
@@ -145,20 +145,20 @@
             width: 1.05px;
             margin: 17px 0;
             height: 65px;
-            background: #FFFFFF;
+            background: #ffffff;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
         }
         .slogan {
-            font-family:"Cormorant Garamond";
+            font-family: "Cormorant Garamond";
             line-height: 34px;
             font-size: 23px;
-            letter-spacing: .3px;
+            letter-spacing: 0.3px;
             font-style: italic;
             font-weight: 500;
-            color: #FFFFFF;
-            font-family:"Cormorant Garamond";
+            color: #ffffff;
+            font-family: "Cormorant Garamond";
             text-align: center;
             padding: 0px 30px;
         }
@@ -176,8 +176,8 @@
 .closebox {
     display: none;
 }
-// Resposive 
-@media  screen and(max-width: 1024px) {
+// Resposive
+@media screen and(max-width: 1024px) {
     .post-image {
         height: 380px !important;
     }
@@ -191,40 +191,40 @@
         transform: translateX(60px) !important;
     }
 }
-@media  screen and(max-width: 768px) {
-  .blog__wrapper-post {
-      flex-wrap: wrap;
-  }
-  .post {
-      width: calc(50% - 60px) !important;
-  }
-  .post:nth-child(3) {
-      margin-top: 50px !important;
-  }
-  .blog__wrapper-header {
-       span {
-           font-size:30px !important;
-       }
-       .title h2 {
-           font-size: 40px !important;
-       }
-       .viewall {
-           font-size: 13px !important;
-       }
-  }
+@media screen and(max-width: 768px) {
+    .blog__wrapper-post {
+        flex-wrap: wrap;
+    }
+    .post {
+        width: calc(50% - 60px) !important;
+    }
+    .post:nth-child(3) {
+        margin-top: 50px !important;
+    }
+    .blog__wrapper-header {
+        span {
+            font-size: 30px !important;
+        }
+        .title h2 {
+            font-size: 40px !important;
+        }
+        .viewall {
+            font-size: 13px !important;
+        }
+    }
 }
-@media  screen and(max-width: 620px) {
+@media screen and(max-width: 620px) {
     .blog__wrapper-post {
         flex-wrap: wrap;
     }
     .post {
         width: calc(90% - 0px) !important;
     }
-    .post:nth-child(3),.post:nth-child(2) {
+    .post:nth-child(3),
+    .post:nth-child(2) {
         margin-top: 50px !important;
     }
     .close-icon {
         transform: translateX(40px) !important;
     }
-    
-  }
+}
