@@ -62,9 +62,9 @@ function CountDown() {
             <div className="countdown__right countdown-item">
                 <div className="countdown__right-content">
                     <span className='title-span'>Flash sale</span>
-                    <h5 data-aos="fade-down" className="title">Charming Shower Gel</h5>
-                    <p>COME FROM USA</p>
-                    <div className="count-group">
+                    <h5 data-aos="h2-animation" className="title">Charming Shower Gel</h5>
+                    <p data-aos="span-ani">COME FROM USA</p>
+                    <div data-aos="times-animation" className="count-group">
                         <div className="count-circle">
                             <h6>{timerDays}</h6>
                             <span className='times'>Days</span>
@@ -84,7 +84,7 @@ function CountDown() {
                     </div>
                     <div className="count-price">
                         <h5>40.00</h5>
-                        <button className='shopnow'>
+                        <button data-aos="btn-animation" className='shopnow'>
                             <p>Buy</p>
                             <p>Now</p>
                             <span></span>

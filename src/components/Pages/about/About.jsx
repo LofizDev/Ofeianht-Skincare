@@ -47,10 +47,10 @@ function About() {
                             <div className="product-top-right">
                                 <div className="top-right-content">
                                     <span className='title-span-pro'>100% Natural</span>
-                                    <h4 className='title-pro'>Our Guarantee</h4>
-                                    <p className='text-pro'>We believe that we should not choose between effective and natural cosmetics. Choosing biological and natural products has always been our DNA, and our tireless efforts for a better and more ecological world will never stop.</p>
+                                    <h4 data-aos="h3-animation" className='title-pro'>Our Guarantee</h4>
+                                    <p data-aos="h4-animation" className='text-pro'>We believe that we should not choose between effective and natural cosmetics. Choosing biological and natural products has always been our DNA, and our tireless efforts for a better and more ecological world will never stop.</p>
                                 </div>
-                                <button id='btn-about' className='shopnow'>
+                                <button data-aos="h5-animation" id='btn-about' className='shopnow'>
                                     <p>Discover</p>
                                     <p>more</p>
                                     <span></span>
@@ -61,10 +61,10 @@ function About() {
                             <div className="product-bottom-left">
                             <div className="bottom-left-content">
                                     <span className='title-span-pro'>Our Passionate</span>
-                                    <h4 className='title-pro'>We love cosmetics!</h4>
-                                    <p className='text-pro'>We are a team of passionate beauty curators who believe in the idea that authentic, efficient and clean beauty will revolutionize the way we think about cosmetics, an idea we think should be spread widely!</p>
+                                    <h4 data-aos="h3-animation" className='title-pro'>We love cosmetics!</h4>
+                                    <p data-aos="h4-animation" className='text-pro'>We are a team of passionate beauty curators who believe in the idea that authentic, efficient and clean beauty will revolutionize the way we think about cosmetics, an idea we think should be spread widely!</p>
                                 </div>
-                                <button id='btn-about' className='shopnow'>
+                                <button data-aos="h5-animation" id='btn-about' className='shopnow'>
                                     <p>Discover</p>
                                     <p>more</p>
                                     <span></span>
@@ -77,7 +77,7 @@ function About() {
                     </div>
                 </div>
                 <div className="about-persons">
-                    <div className="about-persons-wrapper">
+                    <div data-aos="blogss-animation" className="about-persons-wrapper">
                         <div className="about-person">
                             <img className='person-avatar' src="https://i.pinimg.com/564x/2b/6d/76/2b6d762ac6793e750121bf2c511199ae.jpg" alt="" />
                             <div className="person-info">

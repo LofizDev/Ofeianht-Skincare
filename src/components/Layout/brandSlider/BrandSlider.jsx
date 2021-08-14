@@ -43,19 +43,12 @@ function BrandSlider() {
     ]
   };
 
-  useEffect(() => {
-    Aos.init({ offset: 20, delay: 480 })
-  }, [])
   return (
     <div className='brand'>
       <div className='item__slider'>
         <span>Suggestion for You</span>
         <div className="title">
-          <h2 data-aos-offset="200"
-            data-aos-duration="1000"
-
-            data-aos-anchor-placement="center"
-            data-aos="fade-down">Shop by Brands</h2>
+          <h2 data-aos="h3-animation" >Shop by Brands</h2>
         </div>
       </div>
       <div className="brand-slider">

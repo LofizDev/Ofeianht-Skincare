@@ -34,7 +34,7 @@
                 }
                 .post-image {
                     overflow: hidden;
-                    height: 420px;
+                    height: 430px;
                     img {
                         object-fit: cover;
                         height: 100%;
@@ -228,3 +228,35 @@
         transform: translateX(40px) !important;
     }
 }
+
+
+[data-aos="blogs-animation"] {
+    transition-property: transform, opacity;
+    transition: .4s ease-in;
+    
+    @media screen and (min-width: 768px) {
+        transform: translateY(15px);
+        opacity:0 ;
+        
+        &.aos-animate {
+         transition-delay: .1s;
+         opacity: 1;
+       transform: translateX(0);
+     }
+   }
+ }
+ [data-aos="blogss-animation"] {
+    transition-property: transform, opacity;
+    transition: .3s ease-in;
+    
+    @media screen and (min-width: 768px) {
+        transform: translateY(25px);
+        opacity:0 ;
+        
+        &.aos-animate {
+         transition-delay: .3s;
+         opacity: 1;
+       transform: translateX(0);
+     }
+   }
+ }

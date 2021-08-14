@@ -195,6 +195,69 @@
         }
      }
  
+     [data-aos="h2-animation"] {
+         transition-property: transform, opacity;
+         transition: .3s linear;
+         
+         @media screen and (min-width: 768px) {
+             transform: translateY(-40px);
+             &.aos-animate {
+            transform: translateX(0);
+            transition-delay: .2s;
+          }
+        }
+      }
+      
+   
+     
+      
+     [data-aos="span-ani"] {
+         transition-property: transform, opacity;
+         transition: .4s linear;
+         
+         @media screen and (min-width: 768px) {
+             transform: translateY(-50px);
+             opacity: 0;
+             
+             &.aos-animate {
+              transition-delay: .3s;
+              opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+            
+      [data-aos="times-animation"] {
+        transition-property: transform, opacity;
+        transition: .4s linear;
+        
+        @media screen and (min-width: 768px) {
+            transform: translateX(30px);
+            opacity: 0;
+            
+            &.aos-animate {
+             transition-delay: .4s;
+             opacity: 1;
+           transform: translateX(0);
+         }
+       }
+     }
+
+     [data-aos="btn-animation"] {
+        transition-property: transform, opacity;
+        transition: .4s linear;
+        
+        @media screen and (min-width: 768px) {
+            transform: translateX(30px);
+            opacity:0 ;
+            
+            &.aos-animate {
+             transition-delay: .4s;
+             opacity: 1;
+           transform: translateX(0);
+         }
+       }
+     }
  
  
  

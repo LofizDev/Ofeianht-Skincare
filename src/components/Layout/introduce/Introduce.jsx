@@ -1,19 +1,27 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import ball1 from '../../../assets/images/ball1.png'
 import ball2 from '../../../assets/images/ball2.png'
 import ball3 from '../../../assets/images/ball3.png'
 import introduce from '../../../assets/images/introduce.jpg'
 import './style.scss'
+import Aos from 'aos'
+import "aos/dist/aos.css"
+
 function Introduce() {
+    
+    useEffect(() => {
+        Aos.init({ duration:"900", delay: 230, anchorPlacement:'bottom-bottom' })
+      }, [])
+
     return (
         <div className='introduce'>
             <div className="introduce__wrapper">
                 <div className="introduce__wrapper-left">
                     <div className="block-intro">
                         <img className='introduce-img' src={introduce} alt="img" />
-                        <img className='ball1' src={ball1} alt="imgball" />
-                        <img className='ball2' src={ball2} alt="imgball" />
-                        <img className='ball3' src={ball3} alt="imgball" />
+                        <img data-aos="fade-right" className='ball1' src={ball1} alt="imgball" />
+                        <img data-aos="fade-right"  className='ball2' src={ball2} alt="imgball" />
+                        <img  className='ball3' src={ball3} alt="imgball" />
                     </div>
                 </div>
                 <div className="introduce__wrapper-right">

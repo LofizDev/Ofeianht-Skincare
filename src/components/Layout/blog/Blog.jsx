@@ -4,6 +4,7 @@ import blog1 from '../../../assets/images/skin1.jpg'
 import blog2 from '../../../assets/images/skin2.jpg'
 import blog3 from '../../../assets/images/skin3.jpg'
 import  Close  from '../../common/closeIcon/Close'
+import "aos/dist/aos.css"
 
 function Blog() {
     const [box,setBox] = useState(true)
@@ -19,7 +20,7 @@ function Blog() {
                     </div>
                     <div className="viewall">VIEW ALL</div>
                 </div>
-                <div className="blog__wrapper-post">
+                <div data-aos="blogs-animation" className="blog__wrapper-post">
                     <div className="post">
                         <div className="post-image">
                             <img src={blog1} alt="blog" />
