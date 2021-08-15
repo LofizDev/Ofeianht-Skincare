@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Ofeianht-Skincare/static/css/main.25dee72b.chunk.css",
-    "main.js": "/Ofeianht-Skincare/static/js/main.d166d1ee.chunk.js",
-    "main.js.map": "/Ofeianht-Skincare/static/js/main.d166d1ee.chunk.js.map",
+    "main.css": "/Ofeianht-Skincare/static/css/main.325d9668.chunk.css",
+    "main.js": "/Ofeianht-Skincare/static/js/main.b2ccd439.chunk.js",
+    "main.js.map": "/Ofeianht-Skincare/static/js/main.b2ccd439.chunk.js.map",
     "runtime-main.js": "/Ofeianht-Skincare/static/js/runtime-main.be4076a7.js",
     "runtime-main.js.map": "/Ofeianht-Skincare/static/js/runtime-main.be4076a7.js.map",
     "static/css/2.a2caab99.chunk.css": "/Ofeianht-Skincare/static/css/2.a2caab99.chunk.css",
-    "static/js/2.e20a1044.chunk.js": "/Ofeianht-Skincare/static/js/2.e20a1044.chunk.js",
-    "static/js/2.e20a1044.chunk.js.map": "/Ofeianht-Skincare/static/js/2.e20a1044.chunk.js.map",
+    "static/js/2.a1b64541.chunk.js": "/Ofeianht-Skincare/static/js/2.a1b64541.chunk.js",
+    "static/js/2.a1b64541.chunk.js.map": "/Ofeianht-Skincare/static/js/2.a1b64541.chunk.js.map",
     "index.html": "/Ofeianht-Skincare/index.html",
     "static/css/2.a2caab99.chunk.css.map": "/Ofeianht-Skincare/static/css/2.a2caab99.chunk.css.map",
-    "static/css/main.25dee72b.chunk.css.map": "/Ofeianht-Skincare/static/css/main.25dee72b.chunk.css.map",
-    "static/js/2.e20a1044.chunk.js.LICENSE.txt": "/Ofeianht-Skincare/static/js/2.e20a1044.chunk.js.LICENSE.txt",
+    "static/css/main.325d9668.chunk.css.map": "/Ofeianht-Skincare/static/css/main.325d9668.chunk.css.map",
+    "static/js/2.a1b64541.chunk.js.LICENSE.txt": "/Ofeianht-Skincare/static/js/2.a1b64541.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/Ofeianht-Skincare/static/media/parallax.025f5f63.jpg",
     "static/media/close.scss": "/Ofeianht-Skincare/static/media/Holimount.f1bbcfa8.otf",
     "static/media/about-img1.330219d3.png": "/Ofeianht-Skincare/static/media/about-img1.330219d3.png",
@@ -61,8 +61,8 @@
   "entrypoints": [
     "static/js/runtime-main.be4076a7.js",
     "static/css/2.a2caab99.chunk.css",
-    "static/js/2.e20a1044.chunk.js",
-    "static/css/main.25dee72b.chunk.css",
-    "static/js/main.d166d1ee.chunk.js"
+    "static/js/2.a1b64541.chunk.js",
+    "static/css/main.325d9668.chunk.css",
+    "static/js/main.b2ccd439.chunk.js"
   ]
 }
