@@ -5,6 +5,7 @@ import Footer from '../../common/footer/Footer'
 import Parallax from '../../common/parallax/Parallax'
 import Circle from '../../common/circle-animation/Circle'
 import { about1, about2, about3 } from '../../common/icon/index'
+import Cosmetic from '../../Layout/cosmetic/Cosmetic'
 function About() {
  
    
@@ -76,6 +77,7 @@ function About() {
                         </div>
                     </div>
                 </div>
+            <Cosmetic/>
                 <div className="about-persons">
                     <div data-aos="blogss-animation" className="about-persons-wrapper">
                         <div className="about-person">
