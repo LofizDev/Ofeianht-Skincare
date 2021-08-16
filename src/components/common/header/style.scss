@@ -70,18 +70,21 @@
            .cart {
                display: inline-block;
                position: relative;
-               &::after {
+            p {
                 position: absolute;
-                content: '0';
-                top: -8px;
-                right: -12px;
-                display: block;
-                font-size: 8px;
-                padding: 3px 6px;
+                top: -9px;
                 border-radius: 50%;
-                background-color: #000;
+                width: 19px;
+                height: 19px;
+                display: flex;
+                line-height: 20px;
+                font-size: 9px;
+                align-items: center;
+                justify-content: center;
+                right: -13px;
                 color: #fff;
-               }
+                background-color: #000;
+            }
            }
            .search {
                position: relative;

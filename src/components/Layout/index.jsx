@@ -21,7 +21,7 @@ function Index() {
             <Header/>
             <MainSlider/>
             <Banner/>
-            {/* <ItemSlider /> */}
+            <ItemSlider />
             <Introduce/>
             <ParallaxHome/>
             <BrandSlider/>

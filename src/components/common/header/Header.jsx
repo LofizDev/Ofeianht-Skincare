@@ -67,7 +67,7 @@ function Header() {
                 <div className="wrapper-right">
                     <ul>
                         <li className='user'><span>ACCOUNT</span><img style={{ marginLeft: '5px' }} height='12.3px' src={user} alt="user" /></li>
-                        <li className='cart'><span>CART</span><img className='icon-cart' style={{ marginLeft: '6px' }} width='14px' src={bag} alt="search" /></li>
+                        <li className='cart'><span>CART</span><img className='icon-cart' style={{ marginLeft: '6px' }} width='14px' src={bag} alt="search" /><p>12</p></li>
                         <li className='search'><img onClick={() => setSearchBox(!searchBox)} width='16px' src={search} alt="search" /></li>
                         <li onClick={() => setSideBarToggle(!sideBarToggle)} className='sb-icon'>
                             <img width='16px' src={menu} alt="bar" />
