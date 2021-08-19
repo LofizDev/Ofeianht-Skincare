@@ -4,24 +4,29 @@ import { HeaderData } from './HeaderData'
 import './style.scss'
 import { user, bag, menu, search, PinterestIcon, TwitterIcon, InstagramIcon, FacebookIcon, pic1, pic2, pic3, pic4, pic5, pic6 } from '../icon/index'
 import Close from '../closeIcon/Close'
+import { UrlNames } from '../../Layout/UrlNames'
 import HeaderMobi from '../header/headerMobile/HeaderMobile'
+//Redux
+import { connect } from 'react-redux'
 
-function Header() {
+function Header({ cart }) {
     // Toggle show searchBox,sideBar
     const [searchBox, setSearchBox] = useState(false)
     const [sideBarToggle, setSideBarToggle] = useState(false)
     const [showTab, setShowTab] = useState(false)
     const [show, setShow] = useState(false)
     const [currentPos, setCurrentPos] = useState(null)
+    const [cartCount, setCartCount] = useState(0)
     const previousPos = usePrevious(currentPos)
-    
+
+
     // Scroll changes add and clean events
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-    },[])
+    }, [])
 
     // Custom Hook save Position previous
     function usePrevious(value) {
@@ -42,13 +47,24 @@ function Header() {
         setShow(currentPos > previousPos ? true : false)
     }, [currentPos])
 
+    
+    // Cart Count
+    useEffect(() => {
+        let count = 0;
+        cart.forEach((item) => {
+            count += item.qty;
+        });
+
+        setCartCount(count);
+    }, [cart]);
+    console.log(cart)
 
     return (
         <header className='header-container'>
             <div
-             className={show ? 'header__wrapper active-scroll' : 'header__wrapper'} 
-             id={window.scrollY > 50 && !show ? 'no-active' : ''}
-             >
+                className={show ? 'header__wrapper active-scroll' : 'header__wrapper'}
+                id={window.scrollY > 50 && !show ? 'no-active' : ''}
+            >
                 {/* Header left */}
                 <div className="wrapper-left">
                     <ul>
@@ -67,7 +83,7 @@ function Header() {
                 <div className="wrapper-right">
                     <ul>
                         <li className='user'><span>ACCOUNT</span><img style={{ marginLeft: '5px' }} height='12.3px' src={user} alt="user" /></li>
-                        <li className='cart'><span>CART</span><img className='icon-cart' style={{ marginLeft: '6px' }} width='14px' src={bag} alt="search" /><p>12</p></li>
+                        <li className='cart'><Link to={UrlNames.CART}><span>CART</span><img className='icon-cart' style={{ marginLeft: '6px' }} width='14px' src={bag} alt="search" /><p>{cartCount}</p></Link></li>
                         <li className='search'><img onClick={() => setSearchBox(!searchBox)} width='16px' src={search} alt="search" /></li>
                         <li onClick={() => setSideBarToggle(!sideBarToggle)} className='sb-icon'>
                             <img width='16px' src={menu} alt="bar" />
@@ -131,12 +147,18 @@ function Header() {
                     <p className='coppy' style={{ letterSpacing: '.3px' }}>© 2021 – <span style={{ color: '#161619', fontWeight: 600 }}>Ofeianht</span>. All rights reserved.</p>
                 </div>
             </div>
-           {/* Overlay PC*/}
-            <div  onClick={() => setSideBarToggle(!sideBarToggle)} className={sideBarToggle ? 'overlay-active' : 'overlay-none'}></div>
-        {/* OverLay Moblie */}
+            {/* Overlay PC*/}
+            <div onClick={() => setSideBarToggle(!sideBarToggle)} className={sideBarToggle ? 'overlay-active' : 'overlay-none'}></div>
+            {/* OverLay Moblie */}
             <div onClick={() => setShowTab(!showTab)} className={showTab ? 'overlay-mb-active' : 'over-mb-none'}></div>
         </header>
     )
 }
 
-export default Header
+const mapStateToProps = (state) => {
+    return {
+      cart: state.shop.cart,
+    };
+  };
+
+export default connect(mapStateToProps)(Header)

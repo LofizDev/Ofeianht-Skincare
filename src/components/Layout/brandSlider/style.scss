@@ -10,6 +10,12 @@
         outline: none;
     }
 }
+.brand-slider {
+  div {
+    outline: none;
+    cursor: pointer;
+  }
+}
 
 [data-aos="h3-animation"] {
     transition-property: transform, opacity;

@@ -1,47 +1,12 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
+import React from 'react'
 import "aos/dist/aos.css"
 import './style.scss'
+import {setting5} from '../../common/setting/Setting'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import { brand1, brand2, brand3, brand4, brand5 } from '../../common/icon/index'
 
 function BrandSlider() {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
 
   return (
     <div className='brand'>
@@ -52,36 +17,36 @@ function BrandSlider() {
         </div>
       </div>
       <div className="brand-slider">
-        <Slider {...settings}>
+        <Slider {...setting5}>
           <div>
-            <img src={brand1} alt="" />
+            <img src={brand1} alt="brand" />
           </div>
           <div>
-            <img src={brand2} alt="" />
+            <img src={brand2} alt="brand" />
           </div>
           <div>
-            <img src={brand3} alt="" />
+            <img src={brand3} alt="brand" />
           </div>
           <div>
-            <img src={brand4} alt="" />
+            <img src={brand4} alt="brand" />
           </div>
           <div>
-            <img src={brand5} alt="" />
+            <img src={brand5} alt="brand" />
           </div>
           <div>
-            <img src={brand1} alt="" />
+            <img src={brand1} alt="brand" />
           </div>
           <div>
-            <img src={brand2} alt="" />
+            <img src={brand2} alt="brand" />
           </div>
           <div>
-            <img src={brand3} alt="" />
+            <img src={brand3} alt="brand" />
           </div>
           <div>
-            <img src={brand4} alt="" />
+            <img src={brand4} alt="brand" />
           </div>
           <div>
-            <img src={brand5} alt="" />
+            <img src={brand5} alt="brand" />
           </div>
         </Slider>
       </div>

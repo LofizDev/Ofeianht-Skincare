@@ -7,6 +7,7 @@ import {UrlNames} from './components/Layout/UrlNames'
 import contact from './components/Pages/contact/contact'
 import About from './components/Pages/about/About'
 import Blog from './components/Pages/blog/Blog'
+import Cart from './components/Pages/cart/Cart'
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
           <Route path={`${UrlNames.CONTACT}`} exact component={contact}></Route>
           <Route path={`${UrlNames.ABOUT}`} exact component={About}></Route>
           <Route path={`${UrlNames.BLOG}`} exact component={Blog}></Route>
+          <Route path={`${UrlNames.CART}`} exact component={Cart}></Route>
         </Switch>
       </Router>
       <ScrollTop/>
