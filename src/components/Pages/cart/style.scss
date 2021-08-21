@@ -1,2 +1,131 @@
 .shopping__cart {
+    &-wrapper {
+        .cart-wrapper-banner {
+            background-color: #F5F5F5;
+            .banner-title {
+                margin: 0 auto;
+                max-width: 1200px;
+                height: 80px;
+                align-items: center;
+                display: flex;
+                font-size: 18px;
+                line-height: 42;
+                justify-content: space-between;
+                .home-cart {
+                    font-size: 12px;
+                    line-height: 28px;
+                }
+            } 
+        }
+        .cart-wrapper-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            table {
+                width: 100%;
+                margin-top: 95px;
+                tr th {
+                    font-size: 14px;
+                    line-height: 75px;
+                    border-bottom: 1px solid #ddd;
+                    font-weight: 400;
+                    text-align: start;
+                    letter-spacing: 2px;
+                }
+                .cart-thumail {
+                    padding-right: 20px;
+                    text-align: start;
+                    padding-top: 30px;
+                    max-width: 100px ;
+                }
+                .cart-remove {
+                    padding-left: 30px;
+                    font-size: 32px !important;
+                    color: #959595;
+                    cursor: pointer;
+                }
+            }
+            .cart-name {
+                font-size: 15px;
+                letter-spacing: 0;
+                font-family:"Cormorant Garamond";
+            }
+            .cart-price {
+                padding-right: 40px;
+            }
+            .cart-quantity {
+                button {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 15px;
+                    color: #959595;
+                    border: 1px solid #ddd;
+                    background-color: transparent;
+                }
+                .number-cart {
+                    font-size: 14px;
+                    color: #161619;
+                }
+            }
+        }
+        .cart-wrapper-totals {
+            max-width: 1200px;
+            margin: 50px auto;
+            .cart-container {
+                padding: 50px 50px;
+                width: 420px;
+                background-color: #F5F5F5;
+                &-title {
+                    font-size: 28px;
+                    line-height: 30px;
+                    padding-bottom: 40px;
+                    font-weight: 600;
+                    letter-spacing: .7px;
+                }
+                .cart-container-list th {
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: .5px;
+                    text-align: start;
+                    font-weight: normal;
+                }
+                
+                .cart-container-list td {
+                    text-align: end;
+                }
+                .sp-text {
+                    padding-bottom: 40px;
+                    padding-left: 30px;
+                    line-height: 24px;
+                    padding-top: 40px;
+                }
+                .tt-pri {
+                    height: 90px;
+                 
+                    td {
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .btn-checkout {
+                display: flex;
+                margin-top: 10px;
+                flex-direction: column;
+                button {
+                    height: 60px;
+                    font-size: 14px;
+                    background-color: #161619;
+                    color: #fff;
+                    border: 1px solid #161619;
+                    letter-spacing: .3px;
+                }
+                button:nth-child(2) {
+                    margin-top: 15px;
+                    background-color: transparent;
+                    color: #161619;
+                }
+            }
+        }
+
+    }
 }

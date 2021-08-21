@@ -17,7 +17,15 @@ export const removeFromCart = (itemID) => {
         }
     }
 }
-
+export const minusFromCart = (itemID) => {
+    return {
+      type: actionTypes.MINUS_FROM_CART,
+      payload: {
+        id: itemID
+      }
+    };
+  };
+  
 export const adjustQty = (itemID,value) => {
     return {
         type:actionTypes.ADJUST_QUANTITY,

@@ -1,12 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.scss'
 import Header from '../../common/header/Header'
 import Footer from '../../common/footer/Footer'
 // Redux
 import { connect } from 'react-redux'
+import CartItem from './cartItem/CartItem'
 
 function Cart({ cart }) {
 
+    const [totalItems, setTotalItems] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    useEffect(() => {
+        let items = 0
+        let price = 0
+
+        cart.forEach(item => {
+            items += item.qty
+            price += item.qty * item.price
+        })
+
+        setTotalItems(items)
+        setTotalPrice(price)
+
+    }, [totalItems, setTotalItems, totalPrice, setTotalPrice])
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, []);
+    
     // Check cart is empty
     if (cart.length < 1) return <h2>no item in cart</h2>
 
@@ -16,8 +38,10 @@ function Cart({ cart }) {
             <div className='shopping__cart'>
                 <div className="shopping__cart-wrapper">
                     <div className="cart-wrapper-banner">
-                        <h5>CART</h5>
-                        <p>Home/cart</p>
+                        <div className="banner-title">
+                        <p>CART</p>
+                        <p className='home-cart'>Home / Cart</p>
+                        </div>
                     </div>
                     <div className="cart-wrapper-content">
                         <table>
@@ -25,7 +49,7 @@ function Cart({ cart }) {
                                 <tr>
                                     <th className='cart-remove'></th>
                                     <th className='cart-thumail'></th>
-                                    <th className='cart-name'>PRODUCT</th>
+                                    <th className='cart-namee'>PRODUCT</th>
                                     <th className='cart-price'>PRICE</th>
                                     <th className='cart-quantity'>QUANTITY</th>
                                     <th className='cart-subtotal'>SUBTOTAL</th>
@@ -33,16 +57,7 @@ function Cart({ cart }) {
                             </thead>
                             <tbody>
                                 {cart.map((item) => (
-                                    <tr>
-                                        <th className='cart-remove'>X</th>
-                                        <th className='cart-thumail'>
-                                            <img style={{ maxWidth: '100px' }} src={item.img} alt="product" />
-                                        </th>
-                                        <th className='cart-name'>{item.title}</th>
-                                        <th className='cart-price'>{item.price}</th>
-                                        <th className='cart-quantity'><button>-</button><span>3</span><button>+</button></th>
-                                        <th className='cart-subtotal'>$100.00</th>
-                                    </tr>
+                                    <CartItem item={item} />
                                 ))}
                             </tbody>
                         </table>
@@ -56,17 +71,17 @@ function Cart({ cart }) {
                                 <tbody>
                                     <tr>
                                         <th>SUBTOTAL</th>
-                                        <td>$150.00</td>
+                                        <td style={{display:'flex',flexDirection:'column'}}>${totalPrice}.00 <span style={{marginTop:'8px'}}>Free shipping</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr className='sp-t'>
                                         <th>SHIPPING</th>
-                                        <td>Shipping options will be updated during checkout.
+                                        <td className='sp-text'>Shipping options will be updated during checkout.
                                             Calculate shipping
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th>TOTAL</th>
-                                        <td>$889.00</td>
+                                    <tr className='tt-pri'>
+                                        <th >TOTAL</th>
+                                        <td>${totalPrice}.00</td>
                                     </tr>
                                 </tbody>
                             </div>
@@ -88,7 +103,8 @@ function Cart({ cart }) {
 
 const mapStateToProps = state => {
     return {
-        cart: state.shop.cart
+        cart: state.shop.cart,
+        products: state.shop.products,
     }
 }
 export default connect(mapStateToProps)(Cart)
