@@ -197,8 +197,8 @@ function Blog() {
                     </div>
                 </div>
             </div>
-            <Parallax />
-            <Footer />
+            {/* <Parallax />
+            <Footer /> */}
         </div>
     )
 }
