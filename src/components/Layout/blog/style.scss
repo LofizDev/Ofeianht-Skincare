@@ -232,10 +232,10 @@
 
 [data-aos="blogs-animation"] {
     transition-property: transform, opacity;
-    transition: .4s ease-in;
+    transition: .3s ease-out;
     
     @media screen and (min-width: 768px) {
-        transform: translateY(15px);
+        transform: translateY(35px);
         opacity:0 ;
         
         &.aos-animate {

@@ -82,9 +82,9 @@ function CountDown() {
                             <span className='times'>Secons</span>
                         </div>
                     </div>
-                    <div className="count-price">
+                    <div data-aos="btn-animation" className="count-price">
                         <h5>40.00</h5>
-                        <button data-aos="btn-animation" className='shopnow'>
+                        <button className='shopnow'>
                             <p>Buy</p>
                             <p>Now</p>
                             <span></span>

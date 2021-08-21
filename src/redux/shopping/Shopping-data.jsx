@@ -7,7 +7,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/matte-lipstick-e1618454461421-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/lipstick-red-e1618456266346-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        discount:'',
+        sold:'',
+        new:''
     },
     {
         id: 2,
@@ -16,16 +19,23 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/wet-lip-gloss-e1618455660983-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/wet-lip-gloss-3-e1618455402164-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        new:'NEW',
+        discount:'',
+        sold:'',
     },
     {
         id: 3,
         title: 'WEIGHTLESS LIPSTICK',
+        prevPrice:65,
         price:30,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/lipstick-2-e1618456328818-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/01/Waterfall_Dip_Sarah_-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        discount:'SALE 45%',
+        sold:'',
+        new:''
     },
     {
         id: 4,
@@ -34,16 +44,23 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/eye-lip-set-e1618454718247-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/lip-cocktail-kit-e1618456362404-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        sold:'SOLD OUT',
+        disscount:'',
+        new:''
     },
     {
         id: 5,
         title: 'MINT SEA SOAK',
+        prevPrice:88,
         price:50,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/sea-soak-e1618456044915-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/polishing-wash-e1618456135737-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        discount:'SALE 43%',
+        sold:'',
+        new:''
     },
     {
         id: 6,
@@ -52,7 +69,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/coco-rose-lip-e1618454993250-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/cover-power-1-e1618454925615-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 7,
@@ -61,16 +81,23 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/eye-serum-e1618456361200-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/rosehip-oil-e1618456072549-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 8,
         title: 'SHOWER GEL',
+        prevPrice:65,
         price:30,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/shower-gel-e1618456029741-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/body-scrub-e1618455244995-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        discount:'SALE 54%',
+        sold:'',
+        new:''
     },
     {
         id: 9,
@@ -79,7 +106,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/coco-rose-lip-collection-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/mineral-cover-power-e1618456179489-370x463.jpg',
         key:'makeup',
-        cate:'Make up'
+        cate:'Make up',
+        disscount:'',
+        sold:'',
+        new:''
     },
 
     // Body
@@ -90,7 +120,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/lipstick-1-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/lipstick-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 11,
@@ -99,7 +132,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/brush-buki-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/brush-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 12,
@@ -108,7 +144,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-4-370x463.jpg',
         hover : 'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-1-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 13,
@@ -117,7 +156,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-1-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/foudation-1-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 14,
@@ -126,7 +168,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/Primer-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/cream-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 15,
@@ -135,7 +180,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/foudation-1-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 16,
@@ -144,7 +192,10 @@ export const shoppingData = [
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/foudation-1-370x463.jpg',
         hover:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-370x463.jpg',
         key:'body',
-        cate:'Body'
+        cate:'Body',
+        disscount:'',
+        sold:'',
+        new:''
     },
 
     // Tool & Brushes
@@ -154,7 +205,10 @@ export const shoppingData = [
         price:15,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/Primer-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 18,
@@ -162,7 +216,10 @@ export const shoppingData = [
         price:16,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-4-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 19,
@@ -170,7 +227,10 @@ export const shoppingData = [
         price:24,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/power-1-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 20,
@@ -178,7 +238,10 @@ export const shoppingData = [
         price:16,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/cover-1-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 21,
@@ -186,7 +249,10 @@ export const shoppingData = [
         price:24,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/blush-brush-1-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
     },
     {
         id: 22,
@@ -194,7 +260,39 @@ export const shoppingData = [
         price:24,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/Primer-370x463.jpg',
         key:'tool',
-        cate:'Tool & Brushes'
+        cate:'Tool & Brushes',
+        disscount:'',
+        sold:'',
+        new:''
+    },
+    // Holiday
+    {
+        id: 23,
+        title: 'THE G.O.A.T',
+        price:45,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-4-370x493.jpg',
+        key:'gift',
+    },
+    {
+        id: 24,
+        title: 'THE MILLENIAL',
+        price:33,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
+        key:'gift',
+    },
+    {
+        id: 25,
+        title: 'THE CALI',
+        price:72,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-1-370x493.jpg',
+        key:'gift',
+    },
+    {
+        id: 26,
+        title: 'THE BFF',
+        price:82,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
+        key:'gift',
     },
 
   

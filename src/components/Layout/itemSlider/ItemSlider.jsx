@@ -23,15 +23,15 @@ function ItemSlider({ products }) {
 
     // Scroll animation
     useEffect(() => {
-        Aos.init({ duration: 1500 })
+        Aos.init({ duration: 1200 })
     }, [])
 
 
     return (
         <div className='item__slider'>
-            <span>Editor’s Pick Recommendation</span>
+            <span id='title'>Editor’s Pick Recommendation</span>
             <div className="title">
-                <h2 data-aos="fade-down">Best Sellers in Last Week</h2>
+                <h2 id='title-big' data-aos="fade-down">Best Sellers in Last Week</h2>
             </div>
             <div className="item-tagname">
                 <ul>
