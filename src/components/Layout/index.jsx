@@ -8,7 +8,6 @@ import Blog from './blog/Blog'
 import BrandSlider from './brandSlider/BrandSlider'
 import CountDown from './countDown/CountDown'
 import GiftHoliday from './giftHoliday/GiftHoliday'
-import Introduce from './introduce/Introduce'
 import ItemSlider from './itemSlider/ItemSlider'
 import ParallaxHome from './parallaxHome/ParallaxHome'
 function Index() {
@@ -23,7 +22,6 @@ function Index() {
             <MainSlider/>
             <Banner/>
             <ItemSlider />
-            {/* <Introduce/> */}
             <ParallaxHome/>
             <BrandSlider/>
             <GiftHoliday/>
