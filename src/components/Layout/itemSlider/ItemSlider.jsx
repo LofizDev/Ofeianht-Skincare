@@ -12,10 +12,13 @@ import { connect } from 'react-redux'
 
 
 // Scroll animation 
-function ItemSlider({ products }) {
+function ItemSlider({ products, compare }) {
 
-    // Set active category
+    // Set active category,showBox compare,overLay compare
     const [active, setActive] = useState('makeup')
+    const [compareBox, setCompareBox] = useState(false)
+    const [overlayBox,setOverlayBox] = useState(false)
+
 
     const clickActive = (active) => {
         setActive(active)
@@ -25,6 +28,12 @@ function ItemSlider({ products }) {
     useEffect(() => {
         Aos.init({ duration: 1200 })
     }, [])
+
+    // Changes state compareBox,overlayBox
+    function handleRemove() {
+        setCompareBox(!compareBox)
+        setOverlayBox(!overlayBox)
+    }
 
 
     return (
@@ -56,10 +65,15 @@ function ItemSlider({ products }) {
 
                 {products.filter(item => item.key === active).map((item) => (
                     <div className='list-item-slider'>
-                        <Item key={item.id} item={item} />
+                        <Item
+                          setCompareBox={setCompareBox} 
+                          compareBox={compareBox}
+                          setOverlayBox={setOverlayBox}
+                          overlayBox={overlayBox} 
+                          key={item.id} item={item}
+                        />
                     </div>
                 ))}
-
             </Slider>
 
             <div className="view-all">
@@ -68,13 +82,33 @@ function ItemSlider({ products }) {
                     <p>all products</p>
                 </button>
             </div>
+            <div className={compareBox ? 'compare__box' : 'none-compare'}>
+                <div className="compare__box-wrapper">
+                    <div className="content-box">
+                        <ul>
+                            {compare.map(item => {
+                                return (
+                                    <>
+                                        <li>{item.title}</li>
+                                        <li>{item.price}</li>
+                                        <li>ADD TO CART</li>
+                                    </>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                    <p onClick={handleRemove}>CLOSE</p>
+                </div>
+                <div className="overlay-compare"></div>
+            </div>
         </div>
     )
 }
 const mapStateToProps = (state) => {
     return {
         products: state.shop.products,
+        compare: state.shop.compare
     };
-};;
+};
 
 export default connect(mapStateToProps)(ItemSlider)

@@ -8,6 +8,14 @@ export const addToCart = (itemID) => {
         }
     }
 }
+export const compareFromCart = (itemID) => {
+    return {
+        type:actionTypes.COMPARE_FROM_CART,
+        payload: {
+            id:itemID
+        }
+    }
+}
 
 export const removeFromCart = (itemID) => {
     return {

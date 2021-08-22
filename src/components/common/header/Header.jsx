@@ -57,7 +57,7 @@ function Header({ cart }) {
 
         setCartCount(count);
     }, [cart]);
-    console.log(cart)
+ 
 
     return (
         <header className='header-container'>

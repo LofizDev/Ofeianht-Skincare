@@ -27,7 +27,7 @@ function Cart({ cart }) {
         setTotalItems(items)
         setTotalPrice(price)
 
-    }, [totalItems, setTotalItems, totalPrice, setTotalPrice])
+    }, [totalItems, setTotalItems, totalPrice, setTotalPrice ,cart])
 
     useEffect(() => {
         window.scrollTo(0,0)

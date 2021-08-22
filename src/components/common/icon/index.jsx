@@ -68,3 +68,13 @@ export {default as blog7} from '../../../assets/images/blog11.jpg'
 export {default as blog8} from '../../../assets/images/blog8.jpg'
 export {default as blog9} from '../../../assets/images/blog9.jpg'
 export {default as blog10} from '../../../assets/images/blog10.jpg'
+
+// img icon slider
+export {default as bagg} from '../../../assets/images/bagdk.png'
+export {default as baglight} from '../../../assets/images/baglight.png'
+export {default as eye} from '../../../assets/images/eyess.png'
+export {default as eyelight} from '../../../assets/images/eyelight.png'
+export {default as heart} from '../../../assets/images/heart-dark.png'
+export {default as heartlight} from '../../../assets/images/heartlight.png'
+export {default as compared} from '../../../assets/images/compare-d.png'
+export {default as comparel} from '../../../assets/images/compare-l.png'

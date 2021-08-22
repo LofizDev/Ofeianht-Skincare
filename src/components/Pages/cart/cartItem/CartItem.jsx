@@ -9,7 +9,7 @@ const CartItem = ({ item ,addToCart,minusFromCart,removeFromCart}) => {
         let price = 0;
         price += item.qty * item.price;
         setTotalPrice(price);
-    }, [item, totalPrice, setTotalPrice,]);
+    }, [item, totalPrice, setTotalPrice]);
 
     useEffect(() => {
         window.scrollTo(0,0)

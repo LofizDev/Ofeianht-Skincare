@@ -4,11 +4,15 @@ import * as actionTypes from './Shopping-types'
 const INITIAL_STATE = {
     products: shoppingData,       // {id,title,descr,price,img}
     cart: [],          // {id,title,descr,price,img,quantity}
+    compare:[],    /// {id,title,descr,price,img,quantity}
     currentItem: null
 }
 
 const shopReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
+
+        // ADD TO CART
+
         case actionTypes.ADD_TO_CART:
             // Great Item data from products array
             const item = state.products.find(
@@ -29,6 +33,30 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                     )
                     : [...state.cart, { ...item, qty: 1 }],
             };
+
+        // COMPARE FROM CART
+
+        case actionTypes.COMPARE_FROM_CART:
+            const items = state.products.find(
+                (product) => product.id === action.payload.id
+            );
+            // Check if Item is in cart already
+            const inStoreCompare = state.compare.find((items) =>
+                items.id === action.payload.id ? true : false
+            );
+
+            return {
+                ...state,
+                compare: inStoreCompare
+                    ? state.compare.map((items) =>
+                        items.id === action.payload.id
+                            ? { ...items, qty: items.qty + 1 }
+                            : items
+                    )
+                    : [...state.compare, { ...items, qty: 1 }],
+            };
+
+        // REMOVE FROM CART
 
         case actionTypes.REMOVE_FROM_CART:
             return {
@@ -52,6 +80,9 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                     )
                     : [...state.cart, { ...itemm, qty: item.qty }]
             };
+
+        // ADJUST QUANTITY
+
         case actionTypes.ADJUST_QUANTITY:
             return {
                 ...state,
@@ -59,6 +90,9 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                     ? { ...item, qty: action.payload.qty }
                     : item)
             }
+
+        // LOAD CURRENT ITEM
+
         case actionTypes.LOAD_CURRENT_ITEM:
             return {
                 ...state,
