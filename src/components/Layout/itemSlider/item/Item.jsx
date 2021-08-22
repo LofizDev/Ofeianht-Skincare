@@ -18,6 +18,7 @@ function Item({ item, addToCart }) {
     const [isHeart, setIsHeart] = useState(false)
     const [isImg, setIsImg] = useState(false)
 
+    
 
     return (
         <div onMouseEnter={() => setIsImg(true)}
@@ -35,7 +36,7 @@ function Item({ item, addToCart }) {
                     style={{ display: isImg ? 'none' : 'block' }}
                     className={item.new === '' ? '' : 'new'}>{item.new}</p>
                 <img src={isImg && item.hover !== undefined ? item.hover : item.img}
-                  alt="product" />
+                  alt="product" className={isImg ? 'trans' : "not"} />
                 
           
                   

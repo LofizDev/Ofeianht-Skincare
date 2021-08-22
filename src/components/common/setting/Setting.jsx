@@ -5,6 +5,7 @@ export const settings = {
     slidesToShow: 4,
     slidesToScroll: 4,
     // autoplay: true,
+    lazyLoad: true,
     autoplaySpeed: 4000,
     responsive: [
       {

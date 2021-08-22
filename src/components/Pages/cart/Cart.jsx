@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 import Header from '../../common/header/Header'
 import Footer from '../../common/footer/Footer'
+import {Link} from 'react-router-dom';
+import CartItem from './cartItem/CartItem'
+import {UrlNames} from '../../../components/Layout/UrlNames';
+import emptyCart from '../../../assets/images/empty-cart.png'
 // Redux
 import { connect } from 'react-redux'
-import CartItem from './cartItem/CartItem'
+import Parallax from '../../common/parallax/Parallax';
 
 function Cart({ cart }) {
 
@@ -30,7 +34,20 @@ function Cart({ cart }) {
     }, []);
     
     // Check cart is empty
-    if (cart.length < 1) return <h2>no item in cart</h2>
+    if (cart.length === 0) {
+        return (
+                <>
+                  <Header/>
+                  <img style={{display:'flex',justifyContent:'center'}} className="cart-empty" width="450px"
+                       src={emptyCart}
+                       alt="cart empty"/>
+                  <Link to={`${UrlNames.SHOP}`}>
+                    <button className="btn-return">Return To Shop</button>
+                  </Link>
+
+                </>
+        );
+      }
 
     return (
         <>
@@ -94,6 +111,7 @@ function Cart({ cart }) {
 
                 </div>
             </div>
+            <Parallax/>
             <Footer />
         </>
     )
