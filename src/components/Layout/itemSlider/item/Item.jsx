@@ -19,6 +19,7 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
          setCompareBox(!compareBox)
          compareFromCart(item.id)
          setOverlayBox(!overlayBox)
+       
     }
 
     return (
@@ -86,9 +87,9 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
                     </div>
                 </li>
                 <li className={isEyes ? 'eyes-true' : 'eyes-false'}>
-                    <div class="tooltip ">
+                    <didv class="tooltip ">
                         <p>Quick View</p>
-                    </div>
+                    </didv>
                 </li>
                 <li className={isCompare ? 'compare-true' : 'compare-false'}>
                     <div class="tooltip ">
@@ -105,7 +106,7 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
 const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
-        compareFromCart: (id) => dispatch(compareFromCart(id))
+        compareFromCart: (id) => dispatch(compareFromCart(id)),   
     }
 }
 

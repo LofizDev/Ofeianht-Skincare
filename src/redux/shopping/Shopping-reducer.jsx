@@ -4,7 +4,7 @@ import * as actionTypes from './Shopping-types'
 const INITIAL_STATE = {
     products: shoppingData,       // {id,title,descr,price,img}
     cart: [],          // {id,title,descr,price,img,quantity}
-    compare:[],    /// {id,title,descr,price,img,quantity}
+    compare: [],    /// {id,title,descr,price,img,quantity}
     currentItem: null
 }
 
@@ -56,6 +56,14 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                     : [...state.compare, { ...items, qty: 1 }],
             };
 
+        // REMOVE FROM COMPARE
+        case actionTypes.REMOVE_FROM_COMPARE:
+            return {
+                ...state,
+                compare: state.compare.filter(item => item.id !== action.payload.id)
+            }
+
+
         // REMOVE FROM CART
 
         case actionTypes.REMOVE_FROM_CART:
@@ -63,6 +71,9 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 cart: state.cart.filter(item => item.id !== action.payload.id)
             }
+
+        // DECREASE FROM CART
+        
         case actionTypes.MINUS_FROM_CART:
             const itemm = state.products.find(
                 (product) => product.id === action.payload.id

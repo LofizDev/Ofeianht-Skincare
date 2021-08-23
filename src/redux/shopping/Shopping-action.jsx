@@ -16,6 +16,14 @@ export const compareFromCart = (itemID) => {
         }
     }
 }
+export const removeFromCompare = (itemID) => {
+    return {
+        type:actionTypes.REMOVE_FROM_COMPARE,
+        payload: {
+            id:itemID
+        }
+    }
+}
 
 export const removeFromCart = (itemID) => {
     return {

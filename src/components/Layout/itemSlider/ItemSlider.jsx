@@ -6,35 +6,30 @@ import Item from './item/Item'
 import Slider from "react-slick"
 import { settings } from '../../common/setting/Setting'
 import "slick-carousel/slick/slick.css"
+import Compare from './compareItem/Compare'
+
 // Redux connect
 import { connect } from 'react-redux'
 
 
-
 // Scroll animation 
-function ItemSlider({ products, compare }) {
-
+function ItemSlider({products,compare}) {
+    
     // Set active category,showBox compare,overLay compare
     const [active, setActive] = useState('makeup')
     const [compareBox, setCompareBox] = useState(false)
     const [overlayBox,setOverlayBox] = useState(false)
 
-
+    
     const clickActive = (active) => {
         setActive(active)
     }
-
+    
     // Scroll animation
     useEffect(() => {
         Aos.init({ duration: 1200 })
     }, [])
-
-    // Changes state compareBox,overlayBox
-    function handleRemove() {
-        setCompareBox(!compareBox)
-        setOverlayBox(!overlayBox)
-    }
-
+    
 
     return (
         <div className='item__slider'>
@@ -66,11 +61,11 @@ function ItemSlider({ products, compare }) {
                 {products.filter(item => item.key === active).map((item) => (
                     <div className='list-item-slider'>
                         <Item
-                          setCompareBox={setCompareBox} 
+                          key={item.id} item={item}
                           compareBox={compareBox}
                           setOverlayBox={setOverlayBox}
                           overlayBox={overlayBox} 
-                          key={item.id} item={item}
+                          setCompareBox={setCompareBox} 
                         />
                     </div>
                 ))}
@@ -85,25 +80,30 @@ function ItemSlider({ products, compare }) {
             <div className={compareBox ? 'compare__box' : 'none-compare'}>
                 <div className="compare__box-wrapper">
                     <div className="content-box">
-                        <ul>
+                        <ul >
                             {compare.map(item => {
                                 return (
-                                    <>
-                                        <li>{item.title}</li>
-                                        <li>{item.price}</li>
-                                        <li>ADD TO CART</li>
-                                    </>
+                                   <li>
+                                       <Compare
+                                          key={item.id}
+                                          compareBox={compareBox}
+                                          setOverlayBox={setOverlayBox}
+                                          overlayBox={overlayBox} 
+                                          setCompareBox={setCompareBox} 
+                                          item={item}/>
+                                    </li>
                                 )
                             })}
                         </ul>
                     </div>
-                    <p onClick={handleRemove}>CLOSE</p>
+                   
                 </div>
-                <div className="overlay-compare"></div>
+                <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}></div>
             </div>
         </div>
     )
 }
+
 const mapStateToProps = (state) => {
     return {
         products: state.shop.products,
