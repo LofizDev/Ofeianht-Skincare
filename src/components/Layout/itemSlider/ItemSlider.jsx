@@ -7,29 +7,34 @@ import Slider from "react-slick"
 import { settings } from '../../common/setting/Setting'
 import "slick-carousel/slick/slick.css"
 import Compare from './compareItem/Compare'
-
+import CompareItem from './compareItem/CompareItem'
+import Recommend from './recommendBox/Recommend'
 // Redux connect
+
 import { connect } from 'react-redux'
 
 
 // Scroll animation 
-function ItemSlider({products,compare}) {
-    
+function ItemSlider({ products, compare }) {
+
     // Set active category,showBox compare,overLay compare
     const [active, setActive] = useState('makeup')
     const [compareBox, setCompareBox] = useState(false)
-    const [overlayBox,setOverlayBox] = useState(false)
+    const [overlayBox, setOverlayBox] = useState(false)
+    const [compareItems,setCompareItems] = useState(true) 
 
-    
     const clickActive = (active) => {
         setActive(active)
     }
-    
+
     // Scroll animation
     useEffect(() => {
         Aos.init({ duration: 1200 })
     }, [])
-    
+
+    function handlCompare() {
+        setCompareItems(!compareItems)
+    }
 
     return (
         <div className='item__slider'>
@@ -61,11 +66,11 @@ function ItemSlider({products,compare}) {
                 {products.filter(item => item.key === active).map((item) => (
                     <div className='list-item-slider'>
                         <Item
-                          key={item.id} item={item}
-                          compareBox={compareBox}
-                          setOverlayBox={setOverlayBox}
-                          overlayBox={overlayBox} 
-                          setCompareBox={setCompareBox} 
+                            key={item.id} item={item}
+                            compareBox={compareBox}
+                            setOverlayBox={setOverlayBox}
+                            overlayBox={overlayBox}
+                            setCompareBox={setCompareBox}
                         />
                     </div>
                 ))}
@@ -80,23 +85,39 @@ function ItemSlider({products,compare}) {
             <div className={compareBox ? 'compare__box' : 'none-compare'}>
                 <div className="compare__box-wrapper">
                     <div className="content-box">
-                        <ul >
-                            {compare.map(item => {
-                                return (
-                                   <li>
-                                       <Compare
-                                          key={item.id}
-                                          compareBox={compareBox}
-                                          setOverlayBox={setOverlayBox}
-                                          overlayBox={overlayBox} 
-                                          setCompareBox={setCompareBox} 
-                                          item={item}/>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                        <div className='list-compare' >
+                            <ul className='compare-left'>
+                                {compare.slice(0,1).map(item => {
+                                    return (
+                                        <li>
+                                            <Compare
+                                                key={item.id}
+                                                compareBox={compareBox}
+                                                setOverlayBox={setOverlayBox}
+                                                overlayBox={overlayBox}
+                                                setCompareBox={setCompareBox}
+                                                item={item} />
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                            <ul className='compare-right'>
+                                <li><input type="text" placeholder='Name Product' /><button>Enter</button></li>
+                                <p className='rec'>Recommend products to compare</p>
+                                <div onClick={handlCompare}
+                                     className="container-compare"
+                                     id={compareItems ? 'compare-item' : 'none-compare-item'}
+                                     >
+                                    {products.slice(3, 7).map((item) => (
+                                        <Recommend item={item}/>
+                                    ))}
+                                </div>
+                                <div onClick={handlCompare}>
+                                     {compareItems ? null: (<CompareItem/>) }
+                                </div>
+                            </ul>
+                        </div>
                     </div>
-                   
                 </div>
                 <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}></div>
             </div>

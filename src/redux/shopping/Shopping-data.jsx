@@ -10,7 +10,9 @@ export const shoppingData = [
         cate:'Make up',
         discount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'QQQQQ',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 2,
@@ -23,6 +25,8 @@ export const shoppingData = [
         new:'NEW',
         discount:'',
         sold:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 3,
@@ -35,7 +39,9 @@ export const shoppingData = [
         cate:'Make up',
         discount:'SALE 45%',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 4,
@@ -47,7 +53,9 @@ export const shoppingData = [
         cate:'Make up',
         sold:'SOLD OUT',
         disscount:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 5,
@@ -60,7 +68,9 @@ export const shoppingData = [
         cate:'Make up',
         discount:'SALE 43%',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 6,
@@ -72,7 +82,9 @@ export const shoppingData = [
         cate:'Make up',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 7,
@@ -84,7 +96,9 @@ export const shoppingData = [
         cate:'Make up',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 8,
@@ -97,7 +111,9 @@ export const shoppingData = [
         cate:'Make up',
         discount:'SALE 54%',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 9,
@@ -109,7 +125,9 @@ export const shoppingData = [
         cate:'Make up',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
 
     // Body
@@ -123,7 +141,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 11,
@@ -135,7 +155,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 12,
@@ -147,7 +169,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 13,
@@ -159,7 +183,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 14,
@@ -171,7 +197,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 15,
@@ -183,7 +211,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 16,
@@ -195,7 +225,9 @@ export const shoppingData = [
         cate:'Body',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
 
     // Tool & Brushes
@@ -208,7 +240,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 18,
@@ -219,7 +253,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 19,
@@ -230,7 +266,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 20,
@@ -241,7 +279,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 21,
@@ -252,7 +292,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 22,
@@ -263,7 +305,9 @@ export const shoppingData = [
         cate:'Tool & Brushes',
         disscount:'',
         sold:'',
-        new:''
+        new:'',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     // Holiday
     {
@@ -272,6 +316,8 @@ export const shoppingData = [
         price:45,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-4-370x493.jpg',
         key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 24,
@@ -279,6 +325,8 @@ export const shoppingData = [
         price:33,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
         key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 25,
@@ -286,6 +334,8 @@ export const shoppingData = [
         price:72,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-1-370x493.jpg',
         key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
     {
         id: 26,
@@ -293,6 +343,8 @@ export const shoppingData = [
         price:82,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
         key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
 
   
