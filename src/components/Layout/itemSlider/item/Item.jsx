@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import {bagg,baglight,eye,eyelight,heart,heartlight,compared, comparel} from '../../../common/icon/index'
 //Redux connect
-import { addToCart, compareFromCart } from '../../../../redux/shopping/Shopping-action'
+import { addToCart, compareFromCart,  loadCurrentItem } from '../../../../redux/shopping/Shopping-action'
 import { connect } from 'react-redux'
 
 
-function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overlayBox,setOverlayBox}) {
+function Item({loadCurrentItem, item, addToCart ,compareBox,setCompareBox, compareFromCart,overlayBox,setOverlayBox,detailBox,setDetailBox }) {
 
     // Hover changes img,icon
     const [isBag, setIsBag] = useState(false)
@@ -14,14 +14,20 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
     const [isImg, setIsImg] = useState(false)
     const [isCompare,setIsCompare] = useState(false)
 
-    // showbox compare
+
+
+    // Handler Compare
     function handleCompare() {
          setCompareBox(!compareBox)
          compareFromCart(item.id)
-         setOverlayBox(!overlayBox)
-       
+         setOverlayBox(!overlayBox)   
     }
-
+    // Handler Detail
+    function handleDetail() {
+        setDetailBox(!detailBox)
+        loadCurrentItem(item)
+    }
+    
     return (
         <div onMouseEnter={() => setIsImg(true)}
             onMouseLeave={() => setIsImg(false)} id='item-slider'>
@@ -62,7 +68,8 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
                     className='love'><img src={isHeart ? heartlight : heart} alt="heart-icon" />
                 </li>
 
-                <li onMouseEnter={() => setIsEyes(true)}
+                <li onClick={handleDetail}
+                    onMouseEnter={() => setIsEyes(true)}
                     onMouseLeave={() => setIsEyes(false)}
                     className='view'><img src={isEyes ? eyelight : eye} alt="detail-icon" />
                 </li>
@@ -97,8 +104,7 @@ function Item({ item, addToCart ,compareBox,setCompareBox, compareFromCart,overl
                     </div>
                 </li>
             </ul>
-            {/* <button onClick={() => addToCart(item.id)}>add to cart</button>
-            <button>view item</button> */}
+    
         </div>
           
     )
@@ -107,6 +113,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
         compareFromCart: (id) => dispatch(compareFromCart(id)),   
+        loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
     }
 }
 

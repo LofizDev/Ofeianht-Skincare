@@ -103,14 +103,14 @@ const shopReducer = (state = INITIAL_STATE, action) => {
             }
 
         // LOAD CURRENT ITEM
-
         case actionTypes.LOAD_CURRENT_ITEM:
             return {
-                ...state,
-                currentItem: action.payload
-            }
-        default: return state
-    }
+              ...state,
+              currentItem: action.payload
+            };
+          default:
+            return state;
+        }
 }
 
 export default shopReducer

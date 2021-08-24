@@ -331,8 +331,9 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-
+     
      &-wrapper {
+          border-radius: 20px;
           background-color: #FFFFFF;
           width: 92%;
           height: 80%;
@@ -345,7 +346,7 @@
           position: fixed;
           top: 0;
           left: 0;
-          opacity: .9;
+          opacity: .7;
           width: 100%;
           height: 100%;
           z-index: 9;
@@ -364,14 +365,11 @@
               
           }
      }
-     .compare__product-title {
-          
-     }
 }
 .overdelete {
      position: absolute;
      right: 0;
-     bottom: -32px;
+     bottom: -34px;
      letter-spacing: 2px;
      cursor: pointer;
      font-size: 20px;
@@ -389,8 +387,6 @@
                justify-content: space-between;
                line-height: 28px;
           }
-          
-       
           .com-des {
                display: flex;
                justify-content: flex-end;
@@ -501,6 +497,7 @@
 #none-compare-item {
      display: none;
 }
+
 @media screen and (max-width:768px) {
      .item-gr-icon {
           .tooltip {

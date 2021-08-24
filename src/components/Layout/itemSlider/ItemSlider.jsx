@@ -10,18 +10,19 @@ import Compare from './compareItem/Compare'
 import CompareItem from './compareItem/CompareItem'
 import Recommend from './recommendBox/Recommend'
 // Redux connect
-
 import { connect } from 'react-redux'
+import View from './views/View'
 
 
 // Scroll animation 
-function ItemSlider({ products, compare }) {
+function ItemSlider({ products, compare,current }) {
 
     // Set active category,showBox compare,overLay compare
     const [active, setActive] = useState('makeup')
     const [compareBox, setCompareBox] = useState(false)
     const [overlayBox, setOverlayBox] = useState(false)
     const [compareItems,setCompareItems] = useState(true) 
+    const [detailBox,setDetailBox] = useState(false)
 
     const clickActive = (active) => {
         setActive(active)
@@ -66,11 +67,14 @@ function ItemSlider({ products, compare }) {
                 {products.filter(item => item.key === active).map((item) => (
                     <div className='list-item-slider'>
                         <Item
-                            key={item.id} item={item}
+                            key={item.id} 
+                            item={item}
                             compareBox={compareBox}
                             setOverlayBox={setOverlayBox}
                             overlayBox={overlayBox}
                             setCompareBox={setCompareBox}
+                            detailBox={detailBox}
+                            setDetailBox={setDetailBox}
                         />
                     </div>
                 ))}
@@ -120,6 +124,11 @@ function ItemSlider({ products, compare }) {
                     </div>
                 </div>
                 <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}></div>
+                <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}></div>
+            </div>
+            {/* Detail Item */}
+            <div className={detailBox ? 'detail__box' : 'none-detail'}>
+                {detailBox && <View  detailBox={detailBox} setDetailBox={setDetailBox}  current={current} /> }
             </div>
         </div>
     )
@@ -128,7 +137,8 @@ function ItemSlider({ products, compare }) {
 const mapStateToProps = (state) => {
     return {
         products: state.shop.products,
-        compare: state.shop.compare
+        compare: state.shop.compare,
+        current: state.shop.currentItem,
     };
 };
 
