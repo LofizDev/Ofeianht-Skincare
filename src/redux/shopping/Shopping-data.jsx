@@ -311,41 +311,113 @@ export const shoppingData = [
     },
     // Holiday
     {
-        id: 23,
+    id: 23,
+    title: 'EVERYTHING PRIMER',
+    price:12,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/7-1-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 24,
+    title: 'THE BFF',
+    price:82,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 25,
+    title: 'THE BFF',
+    price:82,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/B02-1-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 26,
+    title: 'THE BFF',
+    price:82,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/B02-2-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 27,
+    title: 'THE BFF',
+    price:82,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/B03-1-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 28,
+    title: 'THE BFF',
+    price:82,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/B03-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+{
+    id: 29,
+    title: 'THE BFF',
+    price:89,
+    img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/B05-1-2-370x493.jpg',
+    key:'lipstick',
+    cate:'Lipstick',
+    sku:'AAEERRR',
+    des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+},
+
+    {
+        id: 30,
         title: 'THE G.O.A.T',
-        price:45,
-        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-4-370x493.jpg',
-        key:'gift',
-        sku:'AAEERRR',
-        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
-    },
-    {
-        id: 24,
-        title: 'THE MILLENIAL',
-        price:33,
-        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
-        key:'gift',
-        sku:'AAEERRR',
-        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
-    },
-    {
-        id: 25,
-        title: 'THE CALI',
-        price:72,
+        price:32,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-1-370x493.jpg',
         key:'gift',
         sku:'AAEERRR',
         des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
+  
     {
-        id: 26,
+        id: 31,
+        title: 'THE MILLENIAL',
+        price:17,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-4-370x493.jpg',
+        key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+    },
+  
+    {
+        id: 32,
         title: 'THE BFF',
-        price:82,
+        price:32,
+        img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-3-370x493.jpg',
+        key:'gift',
+        sku:'AAEERRR',
+        des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
+    },
+  
+    {
+        id: 33,
+        title: 'THE CRISKR',
+        price:72,
         img:'http://ofeianht.jwsuperthemes.com/wp-content/uploads/2021/04/set-2-370x493.jpg',
         key:'gift',
         sku:'AAEERRR',
         des:'A smoothing, silicone-free primer that creates an even base for make-up application, while helping to extend wear.'
     },
-
   
 ]

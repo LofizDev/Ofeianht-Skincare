@@ -1,0 +1,41 @@
+.single-item {
+    width: calc(25% - 30px);
+    margin-left: 30px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    .pro-im {
+        width: 100%;
+        &:hover {
+            box-shadow: 0 0 14px rgb(30 22 102 / 10%);
+        }
+    }
+    .single-content {
+        .single-cate {
+            color:rgb(243, 88, 74);
+            font-size: 12px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            letter-spacing: .3px;
+        }
+        .single-tt {
+            letter-spacing: 1.65px;
+            margin-bottom: 15px;
+        }
+        .gr-pri {
+            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            .single-pr {
+                margin-left: 5px;
+            }
+            #single-active {
+                color:rgb(243, 88, 74);
+            }
+            .remove-pr {
+                text-decoration: line-through;
+            }
+        }
+    }
+}

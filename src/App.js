@@ -8,11 +8,10 @@ import contact from './components/Pages/contact/contact'
 import About from './components/Pages/about/About'
 import Blog from './components/Pages/blog/Blog'
 import Cart from './components/Pages/cart/Cart'
+import Shop from './components/Pages/shop/Shop'
 
 function App() {
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, []);
+
   return (
     <>
       <Router>
@@ -22,6 +21,7 @@ function App() {
           <Route path={`${UrlNames.ABOUT}`} exact component={About}></Route>
           <Route path={`${UrlNames.BLOG}`} exact component={Blog}></Route>
           <Route path={`${UrlNames.CART}`} exact component={Cart}></Route>
+          <Route path={`${UrlNames.SHOP}`} exact component={Shop}></Route>
         </Switch>
       </Router>
       <ScrollTop/>

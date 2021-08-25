@@ -17,7 +17,7 @@ function View({ current, detailBox, setDetailBox, addToCart }) {
                 </div>
                 <div className="view-detail-left">
                     <div className='blog-detail-img'>
-                        <img src={current.hover} alt="detail-item" />
+                        <img src={current?.hover ? current.hover : current.img} alt="detail-item" />
                     </div>
                 </div>
                 <div className="view-detail-right">

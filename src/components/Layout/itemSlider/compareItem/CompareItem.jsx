@@ -7,7 +7,7 @@ function CompareItem({ compare }) {
         <div className='compare-show-itemss'>
             {compare.slice(1, 2).map((item) => (
                 <>
-                    <img width='175px' src={item.hover} alt="compare" />
+                    <img width='175px' src={item?.hover ? item.img : item.img} alt="compare" />
                     <p >{item.title}</p>
                     <p style={{ textDecoration: 'underline', marginTop: '7px', fontWeight: '600', fontSize: '15px' }}>${item.price}.00</p>
                     <p style={{ lineHeight: '28px', marginTop: '11px' }}>{item.des}</p>
