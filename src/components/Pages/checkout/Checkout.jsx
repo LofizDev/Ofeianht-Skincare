@@ -21,6 +21,11 @@ function Checkout({ cart }) {
         setTotal(price);
     }, [cart]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+
     // Validate
     const validate = Yup.object({
         fullname: Yup.string()
@@ -81,12 +86,12 @@ function Checkout({ cart }) {
                                <input type="text"  />
                            </div> */}
                                         <Form className="form-gr">
-                                            <TextField className='form-input'  label="Full Name" name="fullname" type="text" />
+                                            <TextField className='form-input' label="Full Name" name="fullname" type="text" />
                                             <TextField className='form-input' label="Address" name="address" type="text" />
                                             <TextField className='form-input' label="Phone" name="phone" type="number" />
                                             <TextField className='form-input' label="Email" name="email" type="email" />
                                             <div className="alert-checkout" style={{ backgroundColor: 'green' }}>
-                                            {/* <button type="submit">Check Out</button> */}
+                                                {/* <button type="submit">Check Out</button> */}
                                             </div>
                                         </Form>
                                     </div>
@@ -120,16 +125,15 @@ function Checkout({ cart }) {
                                     TOTAL: ${total}.00
                                 </div>
                                 <p style={{ marginTop: '30px' }}>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                                  <Form>
-                                      <button type="submit" className='checkout-btnn'>Check Out</button>                                  
-                                  </Form>
+                                <Form>
+                                    <button type="submit" className='checkout-btnn'>Check Out</button>
+                                </Form>
                             </div>
                         </div>
                         <Parallax />
                         <Footer />
                     </>
                 )
-
             }}
         </Formik>
     );

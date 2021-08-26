@@ -3,11 +3,13 @@ import './style.scss'
 import { bagg, baglight, eye, eyelight, heart, heartlight, compared, comparel } from '../../../common/icon/index'
 import { connect } from 'react-redux'
 import {addToCart,loadCurrentItem,compareFromCart} from '../../../../redux/shopping/Shopping-action'
-import shopDetail from '../shopDetail/shopDetail'
 import ShopDetail from '../shopDetail/shopDetail'
+import ShopComapre from '../shopCompare/ShopComapre'
+import ShopRecommend from '../shopRecommend/ShopRecommend'
+import ShopCompareItem from '../shopCompare/ShopCompareItem'
 
 
-function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart}) {
+function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart, products,compare}) {
 
     // Hover changes img,icon
     const [isBag, setIsBag] = useState(false)
@@ -25,13 +27,15 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart}
         loadCurrentItem(item)
     }
 
-        // Handler Compare
-        function handleCompare() {
-            setCompareBox(!compareBox)
-            compareFromCart(item.id)
-            setOverlayBox(!overlayBox)   
+    // Handler Compare
+     function handleCompare() {
+         setCompareBox(!compareBox)
+         compareFromCart(item.id)
+         setOverlayBox(!overlayBox)   
        }
-    
+       function handlCompare() {
+        setCompareItems(!compareItems)
+    }
 
     return (
         <div className='single-item'>
@@ -95,7 +99,49 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart}
                     </div>
                 </li>
             </ul>
-       
+      
+            <div className={compareBox ? 'compare__box' : 'none-compare'}>
+                <div className="compare__box-wrapper">
+                    <div className="content-box">
+                        <div className='list-compare' >
+                            <ul className='compare-left'>
+                                {compare.slice(0,1).map(item => {
+                                    return (
+                                        <li>
+                                            <ShopComapre
+                                                key={item.id}
+                                                compareBox={compareBox}
+                                                setOverlayBox={setOverlayBox}
+                                                overlayBox={overlayBox}
+                                                setCompareBox={setCompareBox}
+                                                item={item} />
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                            <ul className='compare-right'>
+                                <li><input type="text" placeholder='Name Product' /><button>Enter</button></li>
+                                <p className='rec'>Recommend products to compare</p>
+                                <div onClick={handlCompare}
+                                     className="container-compare shop-container-compare"
+                                     id={compareItems ? 'compare-item' : 'none-compare-item'}
+                                     >
+                                    {products.map((item) => (
+                                        <ShopRecommend item={item}/>
+                                    ))}
+                                </div>
+                                <div onClick={handlCompare}>
+                                     {compareItems ? null: (<ShopCompareItem/>) }
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}>dsfsdfddsf</div>
+                <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}>sdfdsfsdf</div>
+            </div>
+       {/* Shop Compare */}
+       <div className={overlayBox ? 'overlay-compare' : 'none-overlay-compare'}></div>
        {/* Shop Detail */}
             <div className={detailBox ? 'detail__box' : 'none-detail'}>
                 {detailBox && <ShopDetail 
@@ -116,6 +162,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 const mapStateToProps = (state) => {
     return {
+        products: state.shop.products,
+        compare: state.shop.compare,
         current: state.shop.currentItem,
     };
 };

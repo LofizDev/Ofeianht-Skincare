@@ -112,7 +112,7 @@ function ItemSlider({ products, compare,current }) {
                                      className="container-compare"
                                      id={compareItems ? 'compare-item' : 'none-compare-item'}
                                      >
-                                    {products.slice(3, 7).map((item) => (
+                                    {products.map((item) => (
                                         <Recommend item={item}/>
                                     ))}
                                 </div>

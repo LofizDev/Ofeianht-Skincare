@@ -2,7 +2,7 @@ import React from 'react'
 // Redux
 import { connect } from 'react-redux';
 
-function CompareItem({ compare }) {
+function ShopCompareItem({ compare }) {
     return (
         <div className='compare-show-itemss'>
             {compare.slice(1, 2).map((item) => (
@@ -24,4 +24,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps)(CompareItem)
+export default connect(mapStateToProps)(ShopCompareItem)

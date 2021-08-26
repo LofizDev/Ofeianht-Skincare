@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { removeFromCompare } from '../../../../redux/shopping/Shopping-action'
 
 
-function Compare({ item, removeFromCompare, setCompareBox, setOverlayBox, overlayBox, compareBox }) {
+function ShopCompare({ item, removeFromCompare, setCompareBox, setOverlayBox, overlayBox, compareBox }) {
 
     // Changes state compareBox, overlayBox
     function handleRemove() {
@@ -52,4 +52,4 @@ const mapDispatchToProps = (dispatch) => {
 
     }
 }
-export default connect(null, mapDispatchToProps)(Compare)
+export default connect(null, mapDispatchToProps)(ShopCompare)

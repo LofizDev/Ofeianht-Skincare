@@ -242,39 +242,7 @@
      }
      
 }
-// Custom compare
-.compare__box{
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     z-index: 99;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     
-     &-wrapper {
-          border-radius: 20px;
-          background-color: #FFFFFF;
-          width: 92%;
-          height: 80%;
-          z-index: 99;
-          position: fixed;
-          padding: 30px 20px;
-     }
-     .overlay-compare {
-          background-color: #000;
-          position: fixed;
-          top: 0;
-          left: 0;
-          opacity: .7;
-          width: 100%;
-          height: 100%;
-          z-index: 9;
-     }
-}
+
 .none-compare,.none-overlay-compare {
      display: none;
 }
@@ -391,35 +359,7 @@
           
      }
 }
-.container-compare {
-     margin-top: 20px;
-     display: flex;
-     flex-wrap: wrap;
-     .item-compare {
-          cursor: pointer;
-          width: calc( 50% - 10px );
-          border: 1px solid rgb(230, 228, 228);
-          margin: 5px;
-          font-size: 12px;
-          text-align: center;
-          padding: 20px 45px ;
-          display: flex;
-          border-radius: 8px;
-          flex-direction: column;
-          align-items: center;
-          &:hover {
-               border: 1px solid rgb(196, 196, 196);
-          }
-     }
-}
-.com-pro p {
-     line-height: 28px;
-     font-size: 600;
-     font-weight: 600;
-}
-#none-compare-item {
-     display: none;
-}
+
 
 @media screen and (max-width:768px) {
      .item-gr-icon {
@@ -527,4 +467,70 @@
 .bag-true,.heart-true,.eyes-true,.compare-true {
      opacity: 1;
      transform: translateX(0);
+}
+
+.container-compare {
+     margin-top: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     overflow-y: scroll;
+     height: 400px;
+     .item-compare {
+          cursor: pointer;
+          width: calc( 50% - 10px );
+          border: 1px solid rgb(230, 228, 228);
+          margin: 5px;
+          font-size: 12px;
+          text-align: center;
+          padding: 20px 45px ;
+          display: flex;
+          border-radius: 8px;
+          flex-direction: column;
+          align-items: center;
+          &:hover {
+               border: 1px solid rgb(196, 196, 196);
+          }
+     }
+}
+.com-pro p {
+     line-height: 28px;
+     font-size: 600;
+     font-weight: 600;
+     text-align: start;
+}
+#none-compare-item {
+     display: none;
+}
+// Custom compare
+.compare__box{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 99;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+     &-wrapper {
+          border-radius: 20px;
+          background-color: #FFFFFF;
+          width: 92%;
+          height: 80%;
+          z-index: 99;
+          position: fixed;
+          padding: 30px 20px;
+     }
+     .overlay-compare {
+          background-color: #000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          opacity: .7;
+          width: 100%;
+          height: 100%;
+          z-index: 9;
+     }
 }
