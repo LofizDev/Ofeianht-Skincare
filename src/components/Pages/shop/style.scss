@@ -17,6 +17,7 @@
                 font-size: 14px;
                 margin-top: 12px;
             }
+ 
         }
         .shop-wrapper-content {
             padding: 100px 70px;
@@ -100,11 +101,6 @@
                     }
                 }
                 .shop-search {
-                    p {
-                        margin-bottom: 13px;
-                        font-size: 28px;
-                        font-family :"Cormorant Garamond";
-                    }
                     input {
                         height: 50px;
                         border: 1px solid rgba(22, 22, 25, 0.2);
@@ -226,4 +222,9 @@
         background-color: #161619;
         color: #fff;
     }
+}
+.sss {
+    margin-bottom: 13px;
+    font-size: 28px;
+    font-family :"Cormorant Garamond";
 }

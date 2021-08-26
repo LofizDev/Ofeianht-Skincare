@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.scss'
 import checked from '../../../../assets/images/che.png'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ShareIcon from '@material-ui/icons/Share';
@@ -17,7 +16,7 @@ function View({ current, detailBox, setDetailBox, addToCart }) {
                 </div>
                 <div className="view-detail-left">
                     <div className='blog-detail-img'>
-                        <img src={current?.hover ? current.hover : current.img} alt="detail-item" />
+                        <img src={current?.img ? current.img : current.img} alt="detail-item" />
                     </div>
                 </div>
                 <div className="view-detail-right">
@@ -25,7 +24,7 @@ function View({ current, detailBox, setDetailBox, addToCart }) {
                         <p className='span-inf'>Home/ Product</p>
                         <p className='title-inf'>{current.title}</p>
                         <div className="price-inf">
-                        { current?.prevPrice && <p className='pre-inf'>${current.prevPrice}.00</p>}
+                            { current?.prevPrice && <p className='pre-inf'>${current.prevPrice}.00</p>}
                             <p>${current.price}.00</p>
                         </div>
                         <p className='des-inf'>{current.des}</p>

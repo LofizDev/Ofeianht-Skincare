@@ -66,13 +66,14 @@ function Shop({ products }) {
                                 </ul>
                             </div>
                             <div className="shop-search">
-                                <p>Search</p>
+                                <p className='sss'>Search</p>
                                 <div className="search-gr">
                                     <input type="text" placeholder='Search products...' />
                                     <button><SearchIcon /></button>
                                 </div>
                             </div>
                             <div className="best-sell">
+                                <p className='sss' style={{marginBottom:'20px'}}>Best Seller</p>
                                 {products.slice(6, 9).map((item) => (
                                     <div className="best-sell-item">
                                         <div className="best-img"><img src={item.hover} alt="sellter" /></div>
