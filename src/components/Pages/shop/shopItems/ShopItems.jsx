@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 import { bagg, baglight, eye, eyelight, heart, heartlight, compared, comparel } from '../../../common/icon/index'
 import { connect } from 'react-redux'
-import {addToCart,loadCurrentItem} from '../../../../redux/shopping/Shopping-action'
+import {addToCart,loadCurrentItem,compareFromCart} from '../../../../redux/shopping/Shopping-action'
 import shopDetail from '../shopDetail/shopDetail'
 import ShopDetail from '../shopDetail/shopDetail'
 
 
-function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
+function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart}) {
 
     // Hover changes img,icon
     const [isBag, setIsBag] = useState(false)
@@ -15,6 +15,9 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
     const [isHeart, setIsHeart] = useState(false)
     const [isCompare, setIsCompare] = useState(false)
     const [detailBox,setDetailBox] = useState(false)
+    const [compareBox, setCompareBox] = useState(false)
+    const [overlayBox, setOverlayBox] = useState(false)
+    const [compareItems,setCompareItems] = useState(true) 
 
     // Handler Detail
     function handleDetail() {
@@ -22,6 +25,12 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
         loadCurrentItem(item)
     }
 
+        // Handler Compare
+        function handleCompare() {
+            setCompareBox(!compareBox)
+            compareFromCart(item.id)
+            setOverlayBox(!overlayBox)   
+       }
     
 
     return (
@@ -57,7 +66,7 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
                     className='view'><img src={isEyes ? eyelight : eye} alt="detail-icon" />
                 </li>
 
-                <li 
+                <li onClick={handleCompare}
                     onMouseEnter={() => setIsCompare(true)}
                     onMouseLeave={() => setIsCompare(false)}
                     className='view'><img src={isCompare ? comparel : compared} alt="detail-icon" />
@@ -92,7 +101,6 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
                 {detailBox && <ShopDetail 
                  detailBox={detailBox} setDetailBox={setDetailBox}
                 current={current} /> } 
-
             </div>  
       </div>
 
@@ -102,7 +110,8 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem}) {
 const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
-        loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
+        loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+        compareFromCart: (id) => dispatch(compareFromCart(id))
     };
 };
 const mapStateToProps = (state) => {

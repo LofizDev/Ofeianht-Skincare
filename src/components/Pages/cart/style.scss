@@ -1,22 +1,6 @@
 .shopping__cart {
     &-wrapper {
-        .cart-wrapper-banner {
-            background-color: #F5F5F5;
-            .banner-title {
-                margin: 0 auto;
-                max-width: 1200px;
-                height: 80px;
-                align-items: center;
-                display: flex;
-                font-size: 18px;
-                line-height: 42;
-                justify-content: space-between;
-                .home-cart {
-                    font-size: 12px;
-                    line-height: 28px;
-                }
-            } 
-        }
+  
         .cart-wrapper-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -193,4 +177,21 @@
         max-width: 100px !important;
     }
 
+}
+.cart-wrapper-banner {
+    background-color: #F5F5F5;
+    .banner-title {
+        margin: 0 auto;
+        max-width: 1200px;
+        height: 80px;
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        line-height: 42;
+        justify-content: space-between;
+        .home-cart {
+            font-size: 12px;
+            line-height: 28px;
+        }
+    } 
 }

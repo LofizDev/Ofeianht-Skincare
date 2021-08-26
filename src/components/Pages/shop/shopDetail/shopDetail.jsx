@@ -19,7 +19,7 @@ function View({ current, detailBox, setDetailBox, addToCart }) {
                         <img src={current?.img ? current.img : current.img} alt="detail-item" />
                     </div>
                 </div>
-                <div className="view-detail-right">
+                <div style={{textAlign:'start'}} className="view-detail-right">
                     <div className="detail-info">
                         <p className='span-inf'>Home/ Product</p>
                         <p className='title-inf'>{current.title}</p>

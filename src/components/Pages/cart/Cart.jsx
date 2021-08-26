@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import './style.scss'
 import Header from '../../common/header/Header'
 import Footer from '../../common/footer/Footer'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CartItem from './cartItem/CartItem'
-import {UrlNames} from '../../../components/Layout/UrlNames';
+import { UrlNames } from '../../../components/Layout/UrlNames';
 import emptyCart from '../../../assets/images/empty-cart.png'
 // Redux
 import { connect } from 'react-redux'
@@ -27,27 +27,27 @@ function Cart({ cart }) {
         setTotalItems(items)
         setTotalPrice(price)
 
-    }, [totalItems, setTotalItems, totalPrice, setTotalPrice ,cart])
+    }, [totalItems, setTotalItems, totalPrice, setTotalPrice, cart])
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, []);
-    
+
     // Check cart is empty
     if (cart.length === 0) {
         return (
-                <>
-                  <Header/>
-                  <img style={{display:'flex',justifyContent:'center'}} className="cart-empty" width="450px"
-                       src={emptyCart}
-                       alt="cart empty"/>
-                  <Link to={`${UrlNames.SHOP}`}>
+            <>
+                <Header />
+                <img style={{ display: 'flex', justifyContent: 'center' }} className="cart-empty" width="450px"
+                    src={emptyCart}
+                    alt="cart empty" />
+                <Link to={`${UrlNames.SHOP}`}>
                     <button className="btn-return">Return To Shop</button>
-                  </Link>
+                </Link>
 
-                </>
+            </>
         );
-      }
+    }
 
     return (
         <>
@@ -56,8 +56,8 @@ function Cart({ cart }) {
                 <div className="shopping__cart-wrapper">
                     <div className="cart-wrapper-banner">
                         <div className="banner-title">
-                        <p>CART</p>
-                        <p className='home-cart'>Home / Cart</p>
+                            <p>CART</p>
+                            <p className='home-cart'>Home / Cart</p>
                         </div>
                     </div>
                     <div className="cart-wrapper-content">
@@ -88,7 +88,7 @@ function Cart({ cart }) {
                                 <tbody>
                                     <tr>
                                         <th>SUBTOTAL</th>
-                                        <td style={{display:'flex',flexDirection:'column'}}>${totalPrice}.00 <span style={{marginTop:'8px'}}>Free shipping</span></td>
+                                        <td style={{ display: 'flex', flexDirection: 'column' }}>${totalPrice}.00 <span style={{ marginTop: '8px' }}>Free shipping</span></td>
                                     </tr>
                                     <tr className='sp-t'>
                                         <th>SHIPPING</th>
@@ -103,7 +103,9 @@ function Cart({ cart }) {
                                 </tbody>
                             </div>
                             <div className="btn-checkout">
-                                <button>Proceed to checkout</button>
+                                <Link to={`${UrlNames.CHECKOUT}`}>
+                                    <button style={{width:'100%'}}>Proceed to checkout</button>
+                                </Link>
                                 <button>Continue Shopping</button>
                             </div>
                         </div>
@@ -111,7 +113,7 @@ function Cart({ cart }) {
 
                 </div>
             </div>
-            <Parallax/>
+            <Parallax />
             <Footer />
         </>
     )

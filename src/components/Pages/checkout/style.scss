@@ -1,0 +1,88 @@
+.checkout__page {
+    &-form {
+        margin-top: 40px;
+        .error {
+            color: red;
+            margin-top: -10px;
+        }
+        .is-invalid {
+            border: 10px solid red !important;
+        }
+
+        .page-form-group {
+            display: flex;
+            max-width: 1250px;
+            margin: 0px auto;
+            margin-top: 80px;
+            .form-group-left {
+                width: 50%;
+                margin-right: 80px;
+                .form-input {
+                    margin-bottom: 26px;
+                }
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 35px;
+                }
+                label {
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family :"Cormorant Garamond";
+                }
+               
+                input {
+                    width: 100%;
+                    padding: 20px;
+                    outline: 0;
+                    height: 45px;
+                }
+            }
+            .form-group-right {
+                width: 50%;
+                textarea {
+                    width: 100%;
+                    height: 300px;
+                    opacity: .6;
+                    padding: 15px;
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+    .checkout__page-list {
+        max-width: 1250px;
+        margin: 30px auto;
+        .order-group {
+            width: 66%;
+            margin-top: 30px;
+            .order-wrapper {
+                margin-bottom: 15px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .tt-or,.checkout-total{
+            font-size: 17px;
+            letter-spacing: 1.4px;
+            font-weight: 600;
+            font-family :"Cormorant Garamond";
+        }
+    }
+    .checkout-btnn {
+        background-color: #161619;
+        color: #fff;
+        padding:20px 69px;
+        margin: 50px 0;
+        letter-spacing: .7px;
+        transition: .2s ease;
+        border: 1px solid #161619;
+        &:hover {
+            background-color: #fff;
+            color: #161619;
+        }
+    }
+}
+.is-invalid {
+    border: 1px solid red!important;
+}

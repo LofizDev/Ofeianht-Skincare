@@ -5,4 +5,5 @@ export const UrlNames = {
     ABOUT: '/Ofeianht-Skincare/ABOUT',
     BLOG: '/Ofeianht-Skincare/BLOG',
     CART: '/Ofeianht-Skincare/CART',
+    CHECKOUT: '/Ofeianht-Skincare/CHECKOUT',
 }
