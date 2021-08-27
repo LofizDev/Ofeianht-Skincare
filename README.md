@@ -5,4 +5,4 @@ Build React App Ofeianht Skincare with REDUX | REACTJS,REDUX
 https://lofizdev.github.io/Konsept-ShoppingCart/
 
 # Preview
-![](https://t-f42-zpg.zdn.vn/480/6732673913811646910/0176347419c1ed9fb4d0.jpg) ![cuttheme](https://user-images.githubusercontent.com/86564838/125465287-9d66acf4-29d5-4364-a8c5-82e50267811f.jpg)
+![themeOfeianht2](https://user-images.githubusercontent.com/86564838/131101123-1018d8f4-d8a7-4d46-8154-4c9f8f156c4d.png)
