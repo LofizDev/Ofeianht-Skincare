@@ -51,7 +51,7 @@ function About() {
                                     <h4 data-aos="h3-animation" className='title-pro'>Our Guarantee</h4>
                                     <p data-aos="h4-animation" className='text-pro'>We believe that we should not choose between effective and natural cosmetics. Choosing biological and natural products has always been our DNA, and our tireless efforts for a better and more ecological world will never stop.</p>
                                 </div>
-                                <button data-aos="h5-animation" id='btn-about' className='shopnow'>
+                                <button  id='btn-about' className='shopnow'>
                                     <p>Discover</p>
                                     <p>more</p>
                                     <span></span>
@@ -65,7 +65,7 @@ function About() {
                                     <h4 data-aos="h3-animation" className='title-pro'>We love cosmetics!</h4>
                                     <p data-aos="h4-animation" className='text-pro'>We are a team of passionate beauty curators who believe in the idea that authentic, efficient and clean beauty will revolutionize the way we think about cosmetics, an idea we think should be spread widely!</p>
                                 </div>
-                                <button data-aos="h5-animation" id='btn-about' className='shopnow'>
+                                <button  id='btn-about' className='shopnow'>
                                     <p>Discover</p>
                                     <p>more</p>
                                     <span></span>

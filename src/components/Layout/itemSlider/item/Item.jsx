@@ -1,34 +1,49 @@
 import React, { useState } from 'react'
-import {bagg,baglight,eye,eyelight,heart,heartlight,compared, comparel} from '../../../common/icon/index'
+import { bagg, baglight, eye, eyelight, heart, heartlight, compared, comparel } from '../../../common/icon/index'
 //Redux connect
-import { addToCart, compareFromCart,  loadCurrentItem } from '../../../../redux/shopping/Shopping-action'
+import { addToCart, compareFromCart, loadCurrentItem } from '../../../../redux/shopping/Shopping-action'
 import { connect } from 'react-redux'
+// Toastify
+import { injectStyle } from 'react-toastify/dist/inject-style';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-function Item({loadCurrentItem, item, addToCart ,compareBox,setCompareBox, compareFromCart,overlayBox,setOverlayBox,detailBox,setDetailBox }) {
+function Item({ loadCurrentItem, item, addToCart, compareBox, setCompareBox, compareFromCart, overlayBox, setOverlayBox, detailBox, setDetailBox }) {
 
     // Hover changes img,icon
     const [isBag, setIsBag] = useState(false)
     const [isEyes, setIsEyes] = useState(false)
     const [isHeart, setIsHeart] = useState(false)
     const [isImg, setIsImg] = useState(false)
-    const [isCompare,setIsCompare] = useState(false)
+    const [isCompare, setIsCompare] = useState(false)
 
-
+    // CALL IT ONCE IN MY APP
+    if (typeof window !== 'undefined') {
+        injectStyle();
+    }
 
     // Handler Compare
     function handleCompare() {
-         setCompareBox(!compareBox)
-         compareFromCart(item.id)
-         setOverlayBox(!overlayBox)   
+        setCompareBox(!compareBox)
+        compareFromCart(item.id)
+        setOverlayBox(!overlayBox)
     }
     // Handler Detail
     function handleDetail() {
         setDetailBox(!detailBox)
         loadCurrentItem(item)
     }
-    
+    // Handler Click
+    function handlClick() {
+        notify();
+        addToCart(item.id)
+    }
+    // Toastify success add to cart
+    const notify = () => toast.success('successfully!');
+
     return (
+        <>
+        <ToastContainer className="foo" autoClose={1200}/>
         <div onMouseEnter={() => setIsImg(true)}
             onMouseLeave={() => setIsImg(false)} id='item-slider'>
             <div className="lists-item-img">
@@ -44,9 +59,9 @@ function Item({loadCurrentItem, item, addToCart ,compareBox,setCompareBox, compa
                     style={{ display: isImg ? 'none' : 'block' }}
                     className={item.new === '' ? '' : 'new'}>{item.new}</p>
                 <img src={isImg && item.hover !== undefined ? item.hover : item.img}
-                  alt="product" className={isImg ? 'trans' : "not"} />
-                
-                    
+                    alt="product" className={isImg ? 'trans' : "not"} />
+
+
             </div>
             <div className="lists-item-content">
                 <p className="item-cate">{item.cate}</p>
@@ -58,7 +73,7 @@ function Item({loadCurrentItem, item, addToCart ,compareBox,setCompareBox, compa
             </div>
             <ul className="item-gr-icon">
                 <li onMouseEnter={() => setIsBag(true)}
-                    onClick={() => addToCart(item.id)}
+                    onClick={handlClick}
                     onMouseLeave={() => setIsBag(false)}
                     className='add'><img src={isBag ? baglight : bagg} alt="bag-icon" />
                 </li>
@@ -104,15 +119,16 @@ function Item({loadCurrentItem, item, addToCart ,compareBox,setCompareBox, compa
                     </div>
                 </li>
             </ul>
-    
+
         </div>
-          
+        </>
+
     )
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
-        compareFromCart: (id) => dispatch(compareFromCart(id)),   
+        compareFromCart: (id) => dispatch(compareFromCart(id)),
         loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
     }
 }

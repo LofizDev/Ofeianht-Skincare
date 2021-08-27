@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css"
 import './style.scss'
 import { gel1,gel2,treeslider,treeslider3,persionslider2,logoslider1,modalslider1,loveyourskintext, partten } from '../../common/icon'
 import {ShowNow} from '../../common/button/Button'
-
+import { Link } from "react-router-dom"
+import { UrlNames } from "../UrlNames"
 
 function MainSlider() {
 
@@ -41,7 +42,9 @@ function MainSlider() {
                      <div className="text-effect">
                         <h4 className='textef'>Love your skin</h4>
                         <img height='270px' src={loveyourskintext} alt="img" />
+                        <Link to={`${UrlNames.SHOP}`}>
                         <ShowNow/>
+                        </Link>
                      </div>
                      <img className='logo1' width='820px' src={logoslider1} alt="logoslider" />      
                </div>
@@ -56,9 +59,11 @@ function MainSlider() {
                <div className="slide2-left">
                  <h4 className='text-sl2'>Natural Cream for <br />Soft Skin</h4>
                  <p  className='text-sl2-p'>Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                 <Link to={`${UrlNames.SHOP}`}>
                  <button>
                    Shop Now <span></span>
                  </button>
+                 </Link>
                  <ul className='list-social'>
                            <li className='fl'>FOLLOW US</li>
                            <li>FACEBOOK</li>
@@ -97,7 +102,9 @@ function MainSlider() {
                      <div className="text-effect">
                         <h4 className='textef'>Love your skin</h4>
                         <img  className='label' height='270px' src={loveyourskintext} alt="img" />
+                        <Link to={`${UrlNames.SHOP}`}>
                         <ShowNow/>
+                        </Link>
                      </div>
                      <img className='logo1' width='820px' src={logoslider1} alt="logoslider" />      
                </div>

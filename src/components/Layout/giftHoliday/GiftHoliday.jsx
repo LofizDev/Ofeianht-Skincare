@@ -2,9 +2,11 @@ import React,{useState} from 'react'
 import './style.scss'
 import { connect } from 'react-redux'
 import {addToCart} from '../../../redux/shopping/Shopping-action'
+import { Link } from 'react-router-dom'
+import { UrlNames } from '../UrlNames'
+
+
 function GiftHoliday({ products,addToCart }) {
-
-
     return (
         <div id='gift-holi' className='item__slider'>
             <span id='title'>Awesome Presents</span>
@@ -33,7 +35,9 @@ function GiftHoliday({ products,addToCart }) {
                 ))}
                 </div>
             </div>
+            <Link to={`${UrlNames.SHOP}`}>
             <button id="btn-pr" class="shopnow"><p>Shop</p><p>Bundles</p></button>
+            </Link>
         </div>
     )
 }

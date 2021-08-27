@@ -6,6 +6,8 @@ import '../../common/grid-responsive/grid.scss'
 import flashSale from '../../../assets/images/flase-sale.jpg'
 import '../../common/button/Button.scss'
 import Circle from '../../common/circle-animation/Circle'
+import { Link } from 'react-router-dom'
+import { UrlNames } from '../UrlNames'
 function CountDown() {
 
     const [timerDays, setTimerDays] = useState('00')
@@ -84,11 +86,13 @@ function CountDown() {
                     </div>
                     <div data-aos="btn-animation" className="count-price">
                         <h5>40.00</h5>
+                        <Link to={`${UrlNames.SHOP}`}>
                         <button className='shopnow'>
                             <p>Buy</p>
                             <p>Now</p>
                             <span></span>
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>

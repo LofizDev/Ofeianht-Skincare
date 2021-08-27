@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css"
 import Compare from './compareItem/Compare'
 import CompareItem from './compareItem/CompareItem'
 import Recommend from './recommendBox/Recommend'
+import { Link } from 'react-router-dom'
+import { UrlNames } from '../UrlNames'
 // Redux connect
 import { connect } from 'react-redux'
 import View from './views/View'
@@ -81,10 +83,12 @@ function ItemSlider({ products, compare,current }) {
             </Slider>
 
             <div className="view-all">
-                <button className='shopnow' id='btn-view'>
+            <Link to={`${UrlNames.SHOP}`}>
+                <button  className='shopnow' id='btn-view'>
                     <p>View</p>
                     <p>all products</p>
                 </button>
+                </Link>
             </div>
             <div className={compareBox ? 'compare__box' : 'none-compare'}>
                 <div className="compare__box-wrapper">
