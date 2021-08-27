@@ -57,3 +57,10 @@ export const loadCurrentItem = (item) => {
       payload: item,
     };
   };
+
+  export const addToWishLish = (item) => {
+    return {
+      type: actionTypes.ADD_TO_WISHLIST,
+      payload: item,
+    };
+  };

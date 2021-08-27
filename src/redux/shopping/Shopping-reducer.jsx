@@ -5,7 +5,8 @@ const INITIAL_STATE = {
     products: shoppingData,       // {id,title,descr,price,img}
     cart: [],          // {id,title,descr,price,img,quantity}
     compare: [],    /// {id,title,descr,price,img,quantity}
-    currentItem: null
+    currentItem: null,
+    wishlist:[]
 }
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -101,6 +102,27 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                     ? { ...item, qty: action.payload.qty }
                     : item)
             }
+                   // COMPARE FROM CART
+
+        case actionTypes.ADD_TO_WISHLIST:
+            const wishlist = state.products.find(
+                (product) => product.id === action.payload.id
+            );
+            // Check if Item is in cart already
+            const inWishLish = state.wishlist.find((wishlist) =>
+                wishlist.id === action.payload.id ? true : false
+            );
+
+            return {
+                ...state,
+                wishlist: inWishLish
+                    ? state.wishlist.map((wishlist) =>
+                        wishlist.id === action.payload.id
+                            ? { ...wishlist, qty: wishlist.qty + 1 }
+                            : items
+                    )
+                    : [...state.wishlist, { ...wishlist, qty: 1 }],
+            };
 
         // LOAD CURRENT ITEM
         case actionTypes.LOAD_CURRENT_ITEM:
@@ -112,5 +134,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
             return state;
         }
 }
+
 
 export default shopReducer
