@@ -7,8 +7,13 @@ import ShopDetail from '../shopDetail/shopDetail'
 import ShopComapre from '../shopCompare/ShopComapre'
 import ShopRecommend from '../shopRecommend/ShopRecommend'
 import ShopCompareItem from '../shopCompare/ShopCompareItem'
+import { injectStyle } from "react-toastify/dist/inject-style";
+import { ToastContainer, toast } from "react-toastify";
 
-
+// CALL IT ONCE IN YOUR APP
+if (typeof window !== "undefined") {
+    injectStyle();
+  }
 function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart, products,compare}) {
 
     // Hover changes img,icon
@@ -33,9 +38,14 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart,
          compareFromCart(item.id)
          setOverlayBox(!overlayBox)   
        }
+       
        function handlCompare() {
         setCompareItems(!compareItems)
     }
+    function notify() {
+        toast.success('successfully!')
+      }
+    
 
     return (
         <div className='single-item'>
@@ -54,7 +64,7 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart,
             </div>
             <ul className="item-gr-icon shop-gr-icon">
                 <li onMouseEnter={() => setIsBag(true)}
-                    onClick={() => addToCart(item.id)}
+                    onClick={() =>{ addToCart(item.id);notify()}}
                     onMouseLeave={() => setIsBag(false)}
                     className='add'><img src={isBag ? baglight : bagg} alt="bag-icon" />
                 </li>
@@ -148,6 +158,7 @@ function ShopItems({ item ,addToCart, current ,loadCurrentItem, compareFromCart,
                  detailBox={detailBox} setDetailBox={setDetailBox}
                 current={current} /> } 
             </div>  
+            <ToastContainer autoClose={1200} />
       </div>
 
     )

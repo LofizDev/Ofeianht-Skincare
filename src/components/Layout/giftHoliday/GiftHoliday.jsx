@@ -4,9 +4,17 @@ import { connect } from 'react-redux'
 import {addToCart} from '../../../redux/shopping/Shopping-action'
 import { Link } from 'react-router-dom'
 import { UrlNames } from '../UrlNames'
+import { injectStyle } from "react-toastify/dist/inject-style";
+import { ToastContainer, toast } from "react-toastify";
 
-
+// CALL IT ONCE IN YOUR APP
+if (typeof window !== "undefined") {
+    injectStyle();
+  }
 function GiftHoliday({ products,addToCart }) {
+    function notify() {
+        toast.success('successfully!')
+      }
     return (
         <div id='gift-holi' className='item__slider'>
             <span id='title'>Awesome Presents</span>
@@ -24,7 +32,7 @@ function GiftHoliday({ products,addToCart }) {
                         <div className="list-gift-img">
                             <img src={item.img} alt="gift" />
                         <div className='overlay-gift'>
-                            <button onClick={() => addToCart(item.id)}>Add to cart</button>
+                            <button onClick={() =>{notify();addToCart(item.id)}}>Add to cart</button>
                         </div>
                         </div>
                         <div className="list-gift-content">
@@ -38,6 +46,7 @@ function GiftHoliday({ products,addToCart }) {
             <Link to={`${UrlNames.SHOP}`}>
             <button id="btn-pr" class="shopnow"><p>Shop</p><p>Bundles</p></button>
             </Link>
+            <ToastContainer  autoClose={1200} />
         </div>
     )
 }

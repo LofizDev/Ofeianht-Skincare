@@ -4,9 +4,8 @@ import { bagg, baglight, eye, eyelight, heart, heartlight, compared, comparel } 
 import { addToCart, compareFromCart, loadCurrentItem } from '../../../../redux/shopping/Shopping-action'
 import { connect } from 'react-redux'
 // Toastify
-import { injectStyle } from 'react-toastify/dist/inject-style';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { injectStyle } from "react-toastify/dist/inject-style";
+import { ToastContainer, toast } from "react-toastify";
 
 function Item({ loadCurrentItem, item, addToCart, compareBox, setCompareBox, compareFromCart, overlayBox, setOverlayBox, detailBox, setDetailBox }) {
 
@@ -17,10 +16,10 @@ function Item({ loadCurrentItem, item, addToCart, compareBox, setCompareBox, com
     const [isImg, setIsImg] = useState(false)
     const [isCompare, setIsCompare] = useState(false)
 
-    // CALL IT ONCE IN MY APP
-    if (typeof window !== 'undefined') {
-        injectStyle();
-    }
+  // CALL IT ONCE IN YOUR APP
+if (typeof window !== "undefined") {
+    injectStyle();
+  }
 
     // Handler Compare
     function handleCompare() {
@@ -38,12 +37,13 @@ function Item({ loadCurrentItem, item, addToCart, compareBox, setCompareBox, com
         notify();
         addToCart(item.id)
     }
-    // Toastify success add to cart
-    const notify = () => toast.success('successfully!');
-
+ 
+    function notify() {
+        toast.success('successfully!')
+      }
     return (
         <>
-        <ToastContainer className="foo" autoClose={1200}/>
+       
         <div onMouseEnter={() => setIsImg(true)}
             onMouseLeave={() => setIsImg(false)} id='item-slider'>
             <div className="lists-item-img">
@@ -73,7 +73,7 @@ function Item({ loadCurrentItem, item, addToCart, compareBox, setCompareBox, com
             </div>
             <ul className="item-gr-icon">
                 <li onMouseEnter={() => setIsBag(true)}
-                    onClick={handlClick}
+                    onClick={handlClick} 
                     onMouseLeave={() => setIsBag(false)}
                     className='add'><img src={isBag ? baglight : bagg} alt="bag-icon" />
                 </li>
