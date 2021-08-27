@@ -17,14 +17,16 @@ import View from './views/View'
 
 
 // Scroll animation 
-function ItemSlider({ products, compare,current }) {
+function ItemSlider({ products, compare, current }) {
 
     // Set active category,showBox compare,overLay compare
     const [active, setActive] = useState('makeup')
     const [compareBox, setCompareBox] = useState(false)
     const [overlayBox, setOverlayBox] = useState(false)
-    const [compareItems,setCompareItems] = useState(true) 
-    const [detailBox,setDetailBox] = useState(false)
+    const [compareItems, setCompareItems] = useState(true)
+    const [detailBox, setDetailBox] = useState(false)
+    const [filterData, setFilterData] = useState([])
+    const [word, setWord] = useState("")
 
     const clickActive = (active) => {
         setActive(active)
@@ -35,9 +37,19 @@ function ItemSlider({ products, compare,current }) {
         Aos.init({ duration: 1200 })
     }, [])
 
+    // Handle Compare
     function handlCompare() {
         setCompareItems(!compareItems)
     }
+
+    // Handle Filter
+useEffect(() => {
+    const newFilter = products.filter((value) => {
+        return value.title.toLowerCase().includes(word.toLowerCase())
+        })
+        setFilterData(newFilter)
+},[word])
+
 
     return (
         <div className='item__slider'>
@@ -69,7 +81,7 @@ function ItemSlider({ products, compare,current }) {
                 {products.filter(item => item.key === active).map((item) => (
                     <div className='list-item-slider'>
                         <Item
-                            key={item.id} 
+                            key={item.id}
                             item={item}
                             compareBox={compareBox}
                             setOverlayBox={setOverlayBox}
@@ -83,11 +95,11 @@ function ItemSlider({ products, compare,current }) {
             </Slider>
 
             <div className="view-all">
-            <Link to={`${UrlNames.SHOP}`}>
-                <button  className='shopnow' id='btn-view'>
-                    <p>View</p>
-                    <p>all products</p>
-                </button>
+                <Link to={`${UrlNames.SHOP}`}>
+                    <button className='shopnow' id='btn-view'>
+                        <p>View</p>
+                        <p>all products</p>
+                    </button>
                 </Link>
             </div>
             <div className={compareBox ? 'compare__box' : 'none-compare'}>
@@ -95,7 +107,7 @@ function ItemSlider({ products, compare,current }) {
                     <div className="content-box">
                         <div className='list-compare' >
                             <ul className='compare-left'>
-                                {compare.slice(0,1).map(item => {
+                                {compare.slice(0, 1).map(item => {
                                     return (
                                         <li>
                                             <Compare
@@ -110,18 +122,23 @@ function ItemSlider({ products, compare,current }) {
                                 })}
                             </ul>
                             <ul className='compare-right'>
-                                <li><input type="text" placeholder='Name Product' /><button>Enter</button></li>
+                                <li>
+                                    <input type="text"
+                                       onChange={e => setWord(e.target.value)}
+                                        placeholder='Name Product' />
+                                    <button>Enter</button>
+                                </li>
                                 <p className='rec'>Recommend products to compare</p>
                                 <div onClick={handlCompare}
-                                     className="container-compare"
-                                     id={compareItems ? 'compare-item' : 'none-compare-item'}
-                                     >
-                                    {products.map((item) => (
-                                        <Recommend item={item}/>
+                                    className="container-compare"
+                                    id={compareItems ? 'compare-item' : 'none-compare-item'}
+                                >
+                                    {filterData.map((item) => (
+                                        <Recommend item={item} />
                                     ))}
                                 </div>
                                 <div onClick={handlCompare}>
-                                     {compareItems ? null: (<CompareItem/>) }
+                                    {compareItems ? null : (<CompareItem />)}
                                 </div>
                             </ul>
                         </div>
@@ -132,7 +149,7 @@ function ItemSlider({ products, compare,current }) {
             </div>
             {/* Detail Item */}
             <div className={detailBox ? 'detail__box' : 'none-detail'}>
-                {detailBox && <View  detailBox={detailBox} setDetailBox={setDetailBox}  current={current} /> }
+                {detailBox && <View detailBox={detailBox} setDetailBox={setDetailBox} current={current} />}
             </div>
         </div>
     )
